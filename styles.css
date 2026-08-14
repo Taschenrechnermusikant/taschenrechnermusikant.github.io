@@ -1,0 +1,502 @@
+:root {
+  --bg: #0e0d0c;
+  --bg-card: #1a1816;
+  --ink: #f5f1ea;
+  --muted: #a7a092;
+  --rule: rgba(255, 255, 255, 0.10);
+  --accent: #ff8a3d;
+  --accent-2: #ff4d6d;
+  --max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Locks the page behind the video lightbox */
+html.is-locked, html.is-locked body { overflow: hidden; }
+
+/* Atmospheric glow behind the hero */
+.glow {
+  position: fixed;
+  top: -30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120vw;
+  height: 80vh;
+  background:
+    radial-gradient(closest-side, rgba(255, 138, 61, 0.18), transparent 70%),
+    radial-gradient(closest-side, rgba(255, 77, 109, 0.14), transparent 70%);
+  background-position: 35% 30%, 70% 10%;
+  background-repeat: no-repeat;
+  background-size: 70% 100%, 60% 90%;
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 7rem 1.5rem 5rem;
+}
+
+/* ---------------------------------------------------------------- Hero */
+
+.hero { margin-bottom: 6rem; }
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  background: linear-gradient(115deg, var(--ink) 30%, var(--accent) 70%, var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead {
+  margin: 0;
+  max-width: 36ch;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* ------------------------------------------------------ Section headers */
+
+section { margin-bottom: 5rem; }
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2rem;
+}
+
+h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.section-note {
+  margin: -1rem 0 1.75rem;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------- Thumbnails, shared */
+
+.thumb {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* YouTube pads any source that is not 16:9 with bars baked into the thumbnail.
+   They are not always black: if the video has a colour effect, the bars carry it
+   too. --zoom scales them out of frame, and --tx / --ty recentre first when the
+   padding is lopsided, so nothing is cropped harder than it has to be. Both are
+   set per image in index.html and measured from the artwork. */
+.thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transform: scale(var(--zoom, 1)) translate(var(--tx, 0), var(--ty, 0));
+  transition: transform 0.45s ease;
+}
+
+/* Soft darkening so titles and the play icon stay readable over any artwork */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.04) 60%);
+  opacity: 0.5;
+  transition: opacity 0.22s ease;
+  pointer-events: none;
+}
+
+/* Play affordance: hidden at rest so the artwork stays clean, revealed on hover */
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(18, 16, 15, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.85);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+.play svg {
+  width: 19px;
+  height: 19px;
+  margin-left: 3px;
+  fill: #fff;
+}
+
+.thumb-sm .play {
+  width: 38px;
+  height: 38px;
+}
+
+.thumb-sm .play svg {
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+}
+
+/* Duration badge, bottom right of the featured artwork */
+.dur {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+a:hover .play,
+a:focus-visible .play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+a:hover .scrim,
+a:focus-visible .scrim { opacity: 0.8; }
+
+/* Touch devices have no hover, so keep the play icon visible there */
+@media (hover: none) {
+  .play { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* ------------------------------------------------------------- Featured */
+
+.feature-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.feature-link {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.feature-link:hover .thumb,
+.feature-link:focus-visible .thumb {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 20px 44px rgba(0, 0, 0, 0.5);
+}
+
+.feature-link:hover .thumb img,
+.feature-link:focus-visible .thumb img {
+  transform: scale(calc(var(--zoom, 1) * 1.05)) translate(var(--tx, 0), var(--ty, 0));
+}
+
+.feature-title {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.feature-note {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* ----------------------------------------------------------- Track list */
+
+.tracks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.tracks li { border-bottom: 1px solid var(--rule); }
+
+.track-link {
+  display: grid;
+  grid-template-columns: 132px 1fr auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.8rem 0.85rem;
+  margin: 0 -0.85rem;
+  border-radius: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 0.18s ease;
+}
+
+.track-link:hover,
+.track-link:focus-visible { background: rgba(255, 255, 255, 0.045); }
+
+.thumb-sm {
+  width: 132px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.track-main { min-width: 0; }
+
+.track-title {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Small qualifier after a title: "feat. ...", "version 1", "NSFW" */
+.feat {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: 0.12em;
+}
+
+.track-note {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.track-meta {
+  display: flex;
+  gap: 0.9rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.track-dur { min-width: 3ch; text-align: right; }
+
+/* -------------------------------------------------------- Listen button */
+
+.yt-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #160d0a;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 26px rgba(255, 77, 109, 0.3);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.yt-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.yt-button:hover,
+.yt-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(255, 77, 109, 0.42);
+  filter: brightness(1.05);
+}
+
+/* --------------------------------------------------------------- Footer */
+
+.footer {
+  margin-top: 7rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer p { margin: 0; }
+
+/* ------------------------------------------------------------- Lightbox */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.25rem 1.25rem;
+  background: rgba(6, 5, 5, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox-inner {
+  position: relative;
+  width: min(1100px, 100%);
+}
+
+.lightbox-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lightbox-caption {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.16); }
+
+.lightbox-close svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* -------------------------------------------------------------- Focus */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------- Small screens */
+
+@media (max-width: 720px) {
+  .page { padding: 4.5rem 1.25rem 3.5rem; }
+  .hero { margin-bottom: 4rem; }
+  section { margin-bottom: 3.5rem; }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    max-width: 460px;
+  }
+
+  .track-link {
+    grid-template-columns: 104px 1fr;
+    grid-template-areas:
+      "thumb main"
+      "thumb meta";
+    align-items: start;
+    gap: 0.35rem 1rem;
+  }
+
+  .thumb-sm { grid-area: thumb; width: 104px; }
+  .track-main { grid-area: main; }
+  .track-meta { grid-area: meta; font-size: 0.8rem; }
+  .track-note { font-size: 0.85rem; }
+
+  .footer { margin-top: 4.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thumb, .thumb img, .play, .scrim, .yt-button, .track-link, .lightbox-close {
+    transition: none;
+  }
+}
