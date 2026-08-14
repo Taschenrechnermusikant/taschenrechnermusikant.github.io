@@ -382,6 +382,16 @@ a:focus-visible .scrim { opacity: 0.8; }
 
 .footer p { margin: 0; }
 
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  text-decoration: underline;
+}
+
 /* ------------------------------------------------------------- Lightbox */
 
 .lightbox {
