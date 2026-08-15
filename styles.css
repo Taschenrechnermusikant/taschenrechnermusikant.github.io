@@ -116,6 +116,18 @@ h2::after {
   font-size: 0.95rem;
 }
 
+/* ---------------------------------------------------------------- About */
+
+.about p {
+  max-width: 62ch;
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.about p:last-child { margin-bottom: 0; }
+
 /* --------------------------------------------------- Thumbnails, shared */
 
 .thumb {
@@ -341,6 +353,31 @@ a:focus-visible .scrim { opacity: 0.8; }
 
 .track-dur { min-width: 3ch; text-align: right; }
 
+/* ---------------------------------------------------------------- Studio */
+
+.gear {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem 2.5rem;
+}
+
+.gear-group:last-child { grid-column: 1 / -1; }
+
+.gear-label {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.gear-list {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 /* -------------------------------------------------------- Listen button */
 
 .yt-button {
@@ -501,6 +538,9 @@ button:focus-visible {
   .track-main { grid-area: main; }
   .track-meta { grid-area: meta; font-size: 0.8rem; }
   .track-note { font-size: 0.85rem; }
+
+  .gear { grid-template-columns: 1fr; gap: 1.5rem; }
+  .gear-group:last-child { grid-column: auto; }
 
   .footer { margin-top: 4.5rem; }
 }

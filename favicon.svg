@@ -1,20 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0d0221" />
-      <stop offset="0.5" stop-color="#5b1a8f" />
-      <stop offset="1" stop-color="#1a3fa0" />
-    </linearGradient>
-    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff" />
-      <stop offset="0.45" stop-color="#c9c9d6" />
-      <stop offset="0.55" stop-color="#4a4a56" />
-      <stop offset="1" stop-color="#eeeef5" />
-    </linearGradient>
+    <radialGradient id="bg" cx="35%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#ff8a3d" />
+      <stop offset="0.55" stop-color="#c85a52" />
+      <stop offset="1" stop-color="#ff4d6d" />
+    </radialGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#bg)" />
   <text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="54"
-        text-anchor="middle" fill="url(#chrome)" stroke="#e0559f" stroke-width="1.6" paint-order="stroke">T</text>
+        text-anchor="middle" fill="#0e0d0c">T</text>
   <text x="32" y="48" font-family="'Brush Script MT', 'Segoe Script', cursive" font-style="italic" font-size="22"
-        text-anchor="middle" fill="#f9a8dc" transform="rotate(-14 32 48)">Prod</text>
+        text-anchor="middle" fill="#f5f1ea" transform="rotate(-14 32 48)">Prod</text>
 </svg>

@@ -17,15 +17,23 @@ Then visit http://localhost:8000
 
 | File | What it does |
 | --- | --- |
-| `index.html` | All the content: hero, Featured, All tracks, Collaborations, Listen, footer |
+| `index.html` | All the content: hero, Featured, About, All tracks, Collaborations, Studio, Listen, footer |
 | `styles.css` | All the styling. Colors are variables at the top |
 | `player.js` | Opens a track in a player on the page instead of sending the visitor to YouTube |
+| `favicon.svg` | Tab icon and browser mark, site palette |
+| `apple-touch-icon.png` | 180x180 home-screen icon, rendered from the favicon |
+| `og-card.png` | 1200x630 share card used for link previews |
+| `robots.txt` | Crawler rules, points to `sitemap.xml` |
+| `sitemap.xml` | Single-entry sitemap for the site |
+| `404.html` | Branded not-found page, served automatically by GitHub Pages |
 
 ## Page structure
 
 - **Featured**: three large cards for the tracks worth leading with.
+- **About**: who Tanzaff Productions is, in three short paragraphs.
 - **All tracks**: the full Tanzaff catalogue, newest first, one row per track.
 - **Collaborations**: tracks posted on someone else's channel (the Regata Collective ones).
+- **Studio**: the hardware and studios behind the tracks, grouped by synths, drums and sampling, and studios.
 - **Listen**, footer.
 
 ## Adding or changing a track
@@ -89,7 +97,7 @@ them there and the whole site re-tones.
 Browsers cache those two files. `index.html` links them with a version number:
 
 ```html
-<link rel="stylesheet" href="styles.css?v=9" />
+<link rel="stylesheet" href="styles.css?v=11" />
 <script src="player.js?v=9" defer></script>
 ```
 
