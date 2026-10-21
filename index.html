@@ -6,7 +6,7 @@
     <title>Tanzaff Productions</title>
     <meta name="description" content="Music for Monkeys. Electronica built from recorded instruments and samples of the recent past." />
     <link rel="canonical" href="https://tanzaff.ch/" />
-    <meta name="theme-color" content="#0e0d0c" />
+    <meta name="theme-color" content="#121418" />
 
     <!-- Open Graph (link previews on social / messaging) -->
     <meta property="og:type" content="website" />
@@ -35,7 +35,9 @@
 
     <!-- The ?v= number defeats browser caching. Bump it after editing
          styles.css or player.js so a reload picks the changes up. -->
-    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=12" />
 
     <script type="application/ld+json">
       {
@@ -74,11 +76,13 @@
     </script>
   </head>
   <body>
-    <div class="glow" aria-hidden="true"></div>
+    <!-- EBU colour bars at 75%: white, yellow, cyan, green, magenta, red, blue -->
+    <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
     <main class="page">
-      <header class="hero">
-        <p class="eyebrow">Music for Monkeys</p>
-        <h1>Tanzaff Productions</h1>
+      <header class="masthead">
+        <p class="ident"><span>Music for Monkeys</span><span>Since 2017 &middot; Geneva / La C&ocirc;te</span></p>
+        <h1 class="wordmark">Tanzaff <span>Productions</span></h1>
         <p class="lead">
           Electronica built from recorded instruments and samples of the recent past.
           Sounds for meditating, and for dancing in joy.
@@ -86,423 +90,465 @@
       </header>
 
       <!-- ============================================================
-           FEATURED: three tracks shown large. To swap one out, copy a
-           block below and change the video ID (it appears three times:
-           href, data-video, and the thumbnail src), the title, the note,
-           and the duration.
+           LATEST: the newest release, shown large. It is the first
+           track under All tracks; swap the video ID (href, data-video,
+           thumbnail src), title, note, year and duration together.
            ============================================================ -->
-      <section class="featured" aria-labelledby="featured-heading">
-        <h2 id="featured-heading">Featured</h2>
+      <section class="block latest" aria-labelledby="latest-heading">
+        <h2 id="latest-heading" class="label label-signal">Latest release</h2>
+        <div class="block-body">
+          <a class="latest-link" href="https://www.youtube.com/watch?v=-9VJNBk3ibA" data-video="-9VJNBk3ibA" data-title="Technauto" rel="noopener" target="_blank">
+            <span class="screen screen-lg">
+              <img src="https://i.ytimg.com/vi/-9VJNBk3ibA/hqdefault.jpg" alt="" style="--zoom:1.70;--tx:-2.9%;--ty:19.4%" width="480" height="360" decoding="async" />
+              <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+            </span>
+            <span class="latest-meta">
+              <span class="tc">2026 &middot; 00:04:17</span>
+              <span class="latest-title">Technauto</span>
+              <span class="latest-note">Tech house hardware jam: Behringer Crave and Edge, OP-Z, OP-1, Lottie Canto.</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FEATURED: two more tracks shown medium-sized. Crops for each
+           thumbnail are set with --zoom / --tx / --ty on the img tag.
+           ============================================================ -->
+      <section class="block featured" aria-labelledby="featured-heading">
+        <h2 id="featured-heading" class="label">Featured</h2>
+        <div class="block-body">
         <ul class="feature-grid">
           <li>
             <a class="feature-link" href="https://www.youtube.com/watch?v=XvUxfwfH7Dw" data-video="XvUxfwfH7Dw" data-title="Tacoma Bridge" rel="noopener" target="_blank">
-              <span class="thumb">
+              <span class="screen">
                 <img src="https://i.ytimg.com/vi/XvUxfwfH7Dw/hqdefault.jpg" alt="" style="--zoom:1.38;--tx:0.9%" width="480" height="360" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
                 <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-                <span class="dur">3:17</span>
               </span>
-              <span class="feature-title">Tacoma Bridge</span>
+              <span class="feature-head">
+                <span class="feature-title">Tacoma Bridge</span>
+                <span class="tc">2019 &middot; 03:17</span>
+              </span>
               <span class="feature-note">Matrix 1000, TX81Z, Minitaur, OP-1 and OP-Z.</span>
             </a>
           </li>
           <li>
-            <a class="feature-link" href="https://www.youtube.com/watch?v=-9VJNBk3ibA" data-video="-9VJNBk3ibA" data-title="Technauto" rel="noopener" target="_blank">
-              <span class="thumb">
-                <img src="https://i.ytimg.com/vi/-9VJNBk3ibA/hqdefault.jpg" alt="" style="--zoom:1.70;--tx:-2.9%;--ty:19.4%" width="480" height="360" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-                <span class="dur">4:17</span>
-              </span>
-              <span class="feature-title">Technauto</span>
-              <span class="feature-note">Tech house hardware jam: Behringer Crave and Edge, OP-Z, OP-1, Lottie Canto.</span>
-            </a>
-          </li>
-          <li>
             <a class="feature-link" href="https://www.youtube.com/watch?v=bbCEzlBBN20" data-video="bbCEzlBBN20" data-title="Les Romands" rel="noopener" target="_blank">
-              <span class="thumb">
+              <span class="screen">
                 <img src="https://i.ytimg.com/vi/bbCEzlBBN20/hqdefault.jpg" alt="" width="480" height="360" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
                 <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-                <span class="dur">2:29</span>
               </span>
-              <span class="feature-title">Les Romands</span>
+              <span class="feature-head">
+                <span class="feature-title">Les Romands</span>
+                <span class="tc">2019 &middot; 02:29</span>
+              </span>
               <span class="feature-note">On the line between French and German speaking Switzerland.</span>
             </a>
           </li>
         </ul>
+        </div>
       </section>
 
       <!-- ============================================================
-           ABOUT: short artist note. Edit the paragraphs directly.
-           ============================================================ -->
-      <section class="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About</h2>
-        <p>
+                   <p>
           Tanzaff Productions has been running since 2017 on a pile of hardware and a
           short attention span: analog and FM synths, drum machines, a couple of
           samplers small enough to fit in a bag.
-        </p>
+          </p>
         <p>
           Half the source material was never meant to be music: Swiss TV archive
           footage, a forgotten documentary, a Dr. Dre acapella that wandered in and
           refused to leave. All of it gets cut up and forced to sit next to a drum
           machine until it behaves.
-        </p>
+          </p>
         <p>
           Most of it happens at Tanzaff Studio. Liebi was cut at Lust &amp; Logic
           in Zurich, with Klanggott on FM synths. A handful of tracks came out of
           Fribourg, on the rare synths of the SMEM collection, with Lorenzo
           Pistolesi.
-        </p>
+          </p>: short artist note. Edit the paragraphs directly.
+           ============================================================ -->
+      <section class="block about" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="label">About</h2>
+        <div class="block-body">
+        <p>
+          Tanzaff Productions has been running since 2017 on a pile of hardware and a
+          short attention span: analog and FM synths, drum machines, a couple of
+          samplers small enough to fit in a bag.
+          </p>
+        <p>
+          Half the source material was never meant to be music: Swiss TV archive
+          footage, a forgotten documentary, a Dr. Dre acapella that wandered in and
+          refused to leave. All of it gets cut up and forced to sit next to a drum
+          machine until it behaves.
+          </p>
+        <p>
+          Most of it happens at Tanzaff Studio. Liebi was cut at Lust &amp; Logic
+          in Zurich, with Klanggott on FM synths. A handful of tracks came out of
+          Fribourg, on the rare synths of the SMEM collection, with Lorenzo
+          Pistolesi.
+          </p>
+        </div>
       </section>
 
       <!-- ============================================================
-           ALL TRACKS: newest first. Each row is one <li>. To add a new
-           track, copy a row and change the video ID (href, data-video,
-           thumbnail src), title, note, year and duration.
-           Thumbnail pattern: https://i.ytimg.com/vi/<VIDEO_ID>/hqdefault.jpg
+           ALL TRACKS: grouped by year, newest first.
            ============================================================ -->
-      <section class="work" aria-labelledby="work-heading">
-        <h2 id="work-heading">All tracks</h2>
-        <ol class="tracks">
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=-9VJNBk3ibA" data-video="-9VJNBk3ibA" data-title="Technauto" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/-9VJNBk3ibA/hqdefault.jpg" alt="" style="--zoom:1.70;--tx:-2.9%;--ty:19.4%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Technauto</span>
-                <span class="track-note">Tech house, 113 BPM. Hardware jam on Behringer Crave and Edge, OP-Z, OP-1 and Lottie Canto Colour Palette.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2026</span><span class="track-dur">4:17</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=GXVdYNUtczI" data-video="GXVdYNUtczI" data-title="Light Weight Baby" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/GXVdYNUtczI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Light Weight Baby</span>
-                <span class="track-note">Dedicated to the beloved Ronnie C.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2019</span><span class="track-dur">2:38</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=UK86VbGp0Tg" data-video="UK86VbGp0Tg" data-title="Soviet Christmas (Fragment)" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/UK86VbGp0Tg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Soviet Christmas <span class="feat">Fragment</span></span>
-                <span class="track-note">In Soviet Russia, love is pure.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2019</span><span class="track-dur">0:51</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=XvUxfwfH7Dw" data-video="XvUxfwfH7Dw" data-title="Tacoma Bridge" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/XvUxfwfH7Dw/hqdefault.jpg" alt="" style="--zoom:1.38;--tx:0.9%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Tacoma Bridge</span>
-                <span class="track-note">Matrix 1000, TX81Z, Minitaur, OP-1 and OP-Z.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2019</span><span class="track-dur">3:17</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=bbCEzlBBN20" data-video="bbCEzlBBN20" data-title="Les Romands" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/bbCEzlBBN20/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Les Romands</span>
-                <span class="track-note">Maintenant vous obéissez! On the line between French and German speaking Switzerland.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2019</span><span class="track-dur">2:29</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=FuIAWa-Lnl0" data-video="FuIAWa-Lnl0" data-title="Schattenreich" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/FuIAWa-Lnl0/hqdefault.jpg" alt="" style="--zoom:1.44;--tx:-2.1%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Schattenreich</span>
-                <span class="track-note">OP-Z, OP-1 and Digitakt.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2019</span><span class="track-dur">5:38</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=p9fLxm0uN0k" data-video="p9fLxm0uN0k" data-title="Burning Desire" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/p9fLxm0uN0k/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Burning Desire</span>
-                <span class="track-note">Erotic italo disco, 123 BPM. New mix and master, 2026.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2018</span><span class="track-dur">2:52</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=UcxqThSm0NU" data-video="UcxqThSm0NU" data-title="Miss Milk" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/UcxqThSm0NU/hqdefault.jpg" alt="" style="--zoom:1.39;--tx:0.6%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Miss Milk</span>
-                <span class="track-note">Made with the OP-Z, OP-1 and Volca Sample.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2018</span><span class="track-dur">3:15</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=xZuTtsqNwgc" data-video="xZuTtsqNwgc" data-title="Peter B." rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/xZuTtsqNwgc/hqdefault.jpg" alt="" style="--zoom:1.36" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Peter B.</span>
-                <span class="track-note">First jam with the OP-Z, cut over SRF archive footage.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2018</span><span class="track-dur">2:27</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=-9qbWjIKbq8" data-video="-9qbWjIKbq8" data-title="Communism" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/-9qbWjIKbq8/hqdefault.jpg" alt="" style="--zoom:1.50;--tx:-3.1%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Communism</span>
-                <span class="track-note">A jam.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2018</span><span class="track-dur">9:42</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=pJLd4cqbfHw" data-video="pJLd4cqbfHw" data-title="Brainf**k" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/pJLd4cqbfHw/hqdefault.jpg" alt="" style="--zoom:1.44" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Brainf**k <span class="feat">NSFW</span></span>
-                <span class="track-note">Digitakt and OP-1, against footage from Michael Rauch's Don't Mindfuck Me (1990).</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2018</span><span class="track-dur">1:53</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=Pt-YXccLmtc" data-video="Pt-YXccLmtc" data-title="Liebi" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/Pt-YXccLmtc/hqdefault.jpg" alt="" style="--zoom:1.37" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Liebi</span>
-                <span class="track-note">Drums, bass and mix by Tanzaff, FM synths by Klanggott. Recorded at Lust &amp; Logic, Zurich.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2018</span><span class="track-dur">5:18</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=N4uM37M_GwQ" data-video="N4uM37M_GwQ" data-title="G Thang (Remix)" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/N4uM37M_GwQ/hqdefault.jpg" alt="" style="--zoom:1.37" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">G Thang (Remix)</span>
-                <span class="track-note">Digitakt, Volca Sample and OP-1, over a Dr. Dre acapella.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2017</span><span class="track-dur">4:04</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=Hdx8MwqEWao" data-video="Hdx8MwqEWao" data-title="Tanzschuel" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/Hdx8MwqEWao/hqdefault.jpg" alt="" style="--zoom:1.38" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Tanzschuel</span>
-                <span class="track-note">Produced entirely on the OP-1.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2017</span><span class="track-dur">2:39</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=idKorq2CoSQ" data-video="idKorq2CoSQ" data-title="OK Boomer" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/idKorq2CoSQ/hqdefault.jpg" alt="" style="--zoom:1.40" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">OK Boomer</span>
-                <span class="track-note">A sound collage on the Swiss babyboomer generation. Drums by Klanggott.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2017</span><span class="track-dur">3:49</span></span>
-            </a>
-          </li>
-        </ol>
+      <section class="block work" aria-labelledby="work-heading">
+        <h2 id="work-heading" class="label">All tracks</h2>
+        <div class="block-body">
+          <div class="year-group">
+            <h3 class="year">2026</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=-9VJNBk3ibA" data-video="-9VJNBk3ibA" data-title="Technauto" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/-9VJNBk3ibA/hqdefault.jpg" alt="" style="--zoom:1.70;--tx:-2.9%;--ty:19.4%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Technauto</span>
+                    <span class="track-note">Tech house, 113 BPM. Hardware jam on Behringer Crave and Edge, OP-Z, OP-1 and Lottie Canto Colour Palette.</span>
+                  </span>
+                  <span class="track-dur">04:17</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div class="year-group">
+            <h3 class="year">2019</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=GXVdYNUtczI" data-video="GXVdYNUtczI" data-title="Light Weight Baby" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/GXVdYNUtczI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Light Weight Baby</span>
+                    <span class="track-note">Dedicated to the beloved Ronnie C.</span>
+                  </span>
+                  <span class="track-dur">02:38</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=UK86VbGp0Tg" data-video="UK86VbGp0Tg" data-title="Soviet Christmas (Fragment)" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/UK86VbGp0Tg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Soviet Christmas <span class="feat">Fragment</span></span>
+                    <span class="track-note">In Soviet Russia, love is pure.</span>
+                  </span>
+                  <span class="track-dur">00:51</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=XvUxfwfH7Dw" data-video="XvUxfwfH7Dw" data-title="Tacoma Bridge" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/XvUxfwfH7Dw/hqdefault.jpg" alt="" style="--zoom:1.38;--tx:0.9%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Tacoma Bridge</span>
+                    <span class="track-note">Matrix 1000, TX81Z, Minitaur, OP-1 and OP-Z.</span>
+                  </span>
+                  <span class="track-dur">03:17</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=bbCEzlBBN20" data-video="bbCEzlBBN20" data-title="Les Romands" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/bbCEzlBBN20/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Les Romands</span>
+                    <span class="track-note">Maintenant vous obéissez! On the line between French and German speaking Switzerland.</span>
+                  </span>
+                  <span class="track-dur">02:29</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=FuIAWa-Lnl0" data-video="FuIAWa-Lnl0" data-title="Schattenreich" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/FuIAWa-Lnl0/hqdefault.jpg" alt="" style="--zoom:1.44;--tx:-2.1%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Schattenreich</span>
+                    <span class="track-note">OP-Z, OP-1 and Digitakt.</span>
+                  </span>
+                  <span class="track-dur">05:38</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div class="year-group">
+            <h3 class="year">2018</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=p9fLxm0uN0k" data-video="p9fLxm0uN0k" data-title="Burning Desire" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/p9fLxm0uN0k/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Burning Desire</span>
+                    <span class="track-note">Erotic italo disco, 123 BPM. New mix and master, 2026.</span>
+                  </span>
+                  <span class="track-dur">02:52</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=UcxqThSm0NU" data-video="UcxqThSm0NU" data-title="Miss Milk" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/UcxqThSm0NU/hqdefault.jpg" alt="" style="--zoom:1.39;--tx:0.6%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Miss Milk</span>
+                    <span class="track-note">Made with the OP-Z, OP-1 and Volca Sample.</span>
+                  </span>
+                  <span class="track-dur">03:15</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=xZuTtsqNwgc" data-video="xZuTtsqNwgc" data-title="Peter B." rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/xZuTtsqNwgc/hqdefault.jpg" alt="" style="--zoom:1.36" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Peter B.</span>
+                    <span class="track-note">First jam with the OP-Z, cut over SRF archive footage.</span>
+                  </span>
+                  <span class="track-dur">02:27</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=-9qbWjIKbq8" data-video="-9qbWjIKbq8" data-title="Communism" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/-9qbWjIKbq8/hqdefault.jpg" alt="" style="--zoom:1.50;--tx:-3.1%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Communism</span>
+                    <span class="track-note">A jam.</span>
+                  </span>
+                  <span class="track-dur">09:42</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=pJLd4cqbfHw" data-video="pJLd4cqbfHw" data-title="Brainf**k" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/pJLd4cqbfHw/hqdefault.jpg" alt="" style="--zoom:1.44" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Brainf**k <span class="feat">NSFW</span></span>
+                    <span class="track-note">Digitakt and OP-1, against footage from Michael Rauch's Don't Mindfuck Me (1990).</span>
+                  </span>
+                  <span class="track-dur">01:53</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=Pt-YXccLmtc" data-video="Pt-YXccLmtc" data-title="Liebi" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/Pt-YXccLmtc/hqdefault.jpg" alt="" style="--zoom:1.37" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Liebi</span>
+                    <span class="track-note">Drums, bass and mix by Tanzaff, FM synths by Klanggott. Recorded at Lust &amp; Logic, Zurich.</span>
+                  </span>
+                  <span class="track-dur">05:18</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div class="year-group">
+            <h3 class="year">2017</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=N4uM37M_GwQ" data-video="N4uM37M_GwQ" data-title="G Thang (Remix)" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/N4uM37M_GwQ/hqdefault.jpg" alt="" style="--zoom:1.37" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">G Thang (Remix)</span>
+                    <span class="track-note">Digitakt, Volca Sample and OP-1, over a Dr. Dre acapella.</span>
+                  </span>
+                  <span class="track-dur">04:04</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=Hdx8MwqEWao" data-video="Hdx8MwqEWao" data-title="Tanzschuel" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/Hdx8MwqEWao/hqdefault.jpg" alt="" style="--zoom:1.38" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Tanzschuel</span>
+                    <span class="track-note">Produced entirely on the OP-1.</span>
+                  </span>
+                  <span class="track-dur">02:39</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=idKorq2CoSQ" data-video="idKorq2CoSQ" data-title="OK Boomer" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/idKorq2CoSQ/hqdefault.jpg" alt="" style="--zoom:1.40" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">OK Boomer</span>
+                    <span class="track-note">A sound collage on the Swiss babyboomer generation. Drums by Klanggott.</span>
+                  </span>
+                  <span class="track-dur">03:49</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
       </section>
 
       <!-- ============================================================
-           COLLABORATIONS: tracks that live on a partner channel rather
-           than on the Tanzaff channel.
+           COLLABORATIONS: tracks made with other musicians.
            ============================================================ -->
-      <section class="collabs" aria-labelledby="collabs-heading">
-        <h2 id="collabs-heading">Collaborations</h2>
-        <p class="section-note">
-          Made with Lorenzo Pistolesi and Regata Collective. The Universe pieces were
-          recorded on the rare synthesizers of the SMEM collection in Fribourg and
-          posted on the Regata Collective channel.
-        </p>
-        <ol class="tracks">
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=yj26BISVT1g" data-video="yj26BISVT1g" data-title="Extrasolar Lullaby" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/yj26BISVT1g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Extrasolar Lullaby</span>
-                <span class="track-note">Guitar, bass and synths by Lorenzo Pistolesi. Synths, drums and vocals by Tanzaff.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2021</span><span class="track-dur">6:17</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=7iyFu_gqhxM" data-video="7iyFu_gqhxM" data-title="Ditemi perchè" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/7iyFu_gqhxM/hqdefault.jpg" alt="" style="--zoom:1.46" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Ditemi perchè <span class="feat">feat. Lorenzo Pistolesi</span></span>
-                <span class="track-note">Synths and vocals by Lorenzo Pistolesi. Synths, mix and video by Tanzaff.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2020</span><span class="track-dur">3:25</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=xjWob1KpJIE" data-video="xjWob1KpJIE" data-title="Universe (version 1)" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/xjWob1KpJIE/hqdefault.jpg" alt="" style="--zoom:1.75;--tx:1.0%;--ty:8.3%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Universe <span class="feat">version 1</span></span>
-                <span class="track-note">Synths and drums by Tanzaff, synths and guitar by Lorenzo Pistolesi, mix by Regata Collective.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2020</span><span class="track-dur">19:17</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=H94bcsTDnZM" data-video="H94bcsTDnZM" data-title="Universe part 2 (version 1)" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/H94bcsTDnZM/hqdefault.jpg" alt="" style="--zoom:1.21;--tx:-7.9%;--ty:-7.0%" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Universe part 2 <span class="feat">version 1</span></span>
-                <span class="track-note">The sound of the universe, played on the most famous synths of the sixties and seventies.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2020</span><span class="track-dur">8:28</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="track-link" href="https://www.youtube.com/watch?v=dK4RhFAFnJU" data-video="dK4RhFAFnJU" data-title="Globus" rel="noopener" target="_blank">
-              <span class="thumb thumb-sm">
-                <img src="https://i.ytimg.com/vi/dK4RhFAFnJU/hqdefault.jpg" alt="" style="--zoom:1.35" width="480" height="360" loading="lazy" decoding="async" />
-                <span class="scrim" aria-hidden="true"></span>
-                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              </span>
-              <span class="track-main">
-                <span class="track-title">Globus</span>
-                <span class="track-note">Guitar by Lorenzo Pistolesi. Fretless bass, synths and drum machine by Tanzaff.</span>
-              </span>
-              <span class="track-meta"><span class="track-year">2017</span><span class="track-dur">2:38</span></span>
-            </a>
-          </li>
-        </ol>
+      <section class="block collabs" aria-labelledby="collabs-heading">
+        <h2 id="collabs-heading" class="label">Collaborations</h2>
+        <div class="block-body">
+          <p class="section-note">Made with Lorenzo Pistolesi and Regata Collective. The Universe pieces were recorded on the rare synthesizers of the SMEM collection in Fribourg and posted on the Regata Collective channel.</p>
+          <div class="year-group">
+            <h3 class="year">2021</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=yj26BISVT1g" data-video="yj26BISVT1g" data-title="Extrasolar Lullaby" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/yj26BISVT1g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Extrasolar Lullaby</span>
+                    <span class="track-note">Guitar, bass and synths by Lorenzo Pistolesi. Synths, drums and vocals by Tanzaff.</span>
+                  </span>
+                  <span class="track-dur">06:17</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div class="year-group">
+            <h3 class="year">2020</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=7iyFu_gqhxM" data-video="7iyFu_gqhxM" data-title="Ditemi perchè" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/7iyFu_gqhxM/hqdefault.jpg" alt="" style="--zoom:1.46" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Ditemi perchè <span class="feat">feat. Lorenzo Pistolesi</span></span>
+                    <span class="track-note">Synths and vocals by Lorenzo Pistolesi. Synths, mix and video by Tanzaff.</span>
+                  </span>
+                  <span class="track-dur">03:25</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=xjWob1KpJIE" data-video="xjWob1KpJIE" data-title="Universe (version 1)" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/xjWob1KpJIE/hqdefault.jpg" alt="" style="--zoom:1.75;--tx:1.0%;--ty:8.3%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Universe <span class="feat">version 1</span></span>
+                    <span class="track-note">Synths and drums by Tanzaff, synths and guitar by Lorenzo Pistolesi, mix by Regata Collective.</span>
+                  </span>
+                  <span class="track-dur">19:17</span>
+                </a>
+              </li>
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=H94bcsTDnZM" data-video="H94bcsTDnZM" data-title="Universe part 2 (version 1)" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/H94bcsTDnZM/hqdefault.jpg" alt="" style="--zoom:1.21;--tx:-7.9%;--ty:-7.0%" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Universe part 2 <span class="feat">version 1</span></span>
+                    <span class="track-note">The sound of the universe, played on the most famous synths of the sixties and seventies.</span>
+                  </span>
+                  <span class="track-dur">08:28</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div class="year-group">
+            <h3 class="year">2017</h3>
+            <ol class="tracks">
+              <li>
+                <a class="track-link" href="https://www.youtube.com/watch?v=dK4RhFAFnJU" data-video="dK4RhFAFnJU" data-title="Globus" rel="noopener" target="_blank">
+                  <span class="screen screen-sm">
+                    <img src="https://i.ytimg.com/vi/dK4RhFAFnJU/hqdefault.jpg" alt="" style="--zoom:1.35" width="480" height="360" loading="lazy" decoding="async" />
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                  </span>
+                  <span class="track-main">
+                    <span class="track-title">Globus</span>
+                    <span class="track-note">Guitar by Lorenzo Pistolesi. Fretless bass, synths and drum machine by Tanzaff.</span>
+                  </span>
+                  <span class="track-dur">02:38</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
       </section>
 
       <!-- ============================================================
            STUDIO: the gear behind the tracks, grouped.
            ============================================================ -->
-      <section class="studio" aria-labelledby="studio-heading">
-        <h2 id="studio-heading">Studio</h2>
-        <div class="gear">
-          <div class="gear-group">
-            <p class="gear-label">Synths</p>
-            <p class="gear-list">Elektronika EM-26, Oberheim Matrix 1000, Roland JX-8P, Roland Alpha Juno 2, Yamaha TX81Z, Yamaha TX802, Moog Minitaur, Korg Minilogue, Behringer Pro-800, Behringer Pro VS Mini, Behringer Crave, Behringer Edge, Teenage Engineering OP-1, Teenage Engineering OP-Z</p>
+      <section class="block studio" aria-labelledby="studio-heading">
+        <h2 id="studio-heading" class="label">Studio</h2>
+        <div class="block-body">
+        <dl class="gear">
+          <div>
+            <dt>Synths</dt>
+            <dd>Elektronika EM-26, Oberheim Matrix 1000, Roland JX-8P, Roland Alpha Juno 2, Yamaha TX81Z, Yamaha TX802, Moog Minitaur, Korg Minilogue, Behringer Pro-800, Behringer Pro VS Mini, Behringer Crave, Behringer Edge, Teenage Engineering OP-1, Teenage Engineering OP-Z</dd>
           </div>
-          <div class="gear-group">
-            <p class="gear-label">Drums &amp; sampling</p>
-            <p class="gear-list">Elektron Digitakt, Korg Volca Sample</p>
+          <div>
+            <dt>Drums &amp; sampling</dt>
+            <dd>Elektron Digitakt, Korg Volca Sample</dd>
           </div>
-          <div class="gear-group">
-            <p class="gear-label">Other instruments</p>
-            <p class="gear-list">Lottie Canto Colour Palette (electric kalimba)</p>
+          <div>
+            <dt>Other instruments</dt>
+            <dd>Lottie Canto Colour Palette (electric kalimba)</dd>
           </div>
-          <div class="gear-group">
-            <p class="gear-label">Effects</p>
-            <p class="gear-list">Zoom MS-70CDR, Yamaha REV5</p>
+          <div>
+            <dt>Effects</dt>
+            <dd>Zoom MS-70CDR, Yamaha REV5</dd>
           </div>
-          <div class="gear-group">
-            <p class="gear-label">Studios</p>
-            <p class="gear-list">Tanzaff Studio, Geneva / La C&ocirc;te &middot; Lust &amp; Logic, Zurich &middot; the SMEM collection, Fribourg</p>
+          <div>
+            <dt>Studios</dt>
+            <dd>Tanzaff Studio, Geneva / La C&ocirc;te &middot; Lust &amp; Logic, Zurich &middot; the SMEM collection, Fribourg</dd>
           </div>
+        </dl>
         </div>
       </section>
 
-      <section class="follow" aria-labelledby="follow-heading">
-        <h2 id="follow-heading">Listen</h2>
-        <a class="yt-button" href="https://www.youtube.com/playlist?list=PL48WHU6FHCY6K9aa0umgtaerayKN2XZmx" rel="me noopener" target="_blank">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-          Full playlist on YouTube
-        </a>
+      <section class="block follow" aria-labelledby="follow-heading">
+        <h2 id="follow-heading" class="label">Listen</h2>
+        <div class="block-body">
+          <a class="listen" href="https://www.youtube.com/playlist?list=PL48WHU6FHCY6K9aa0umgtaerayKN2XZmx" rel="me noopener" target="_blank">
+            <span>Full playlist on YouTube</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
       </section>
 
       <footer class="footer">
-        <p>&copy; 2026 Tanzaff Productions &middot; <a href="mailto:contact@tanzaff.ch">contact@tanzaff.ch</a></p>
+        <p>&copy; 2026 Tanzaff Productions</p>
+        <p><a href="mailto:contact@tanzaff.ch">contact@tanzaff.ch</a></p>
       </footer>
     </main>
 
