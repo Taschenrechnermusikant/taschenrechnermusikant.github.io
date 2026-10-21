@@ -119,31 +119,21 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   color: var(--muted);
 }
 
-/* Motto and intro start on the content column, in line with every section
-   below them */
-.masthead-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-left: calc(var(--label-col) + 2rem);
-}
-
-.motto {
-  margin: 0;
-  font-stretch: 112%;
-  font-weight: 650;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-}
-
+/* Intro flush left under the wordmark. On wide screens each sentence gets its
+   own line across the width of the lockup; the first sentence is about
+   32.5em long, so the size is derived from the column width. On narrow
+   screens it wraps normally. */
 .lead {
-  margin: 0;
-  max-width: 44ch;
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  line-height: 1.45;
-  text-wrap: balance;
+  margin: 2.5rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 450;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 821px) {
+  .lead { font-size: min(1.95rem, calc((100vw - 3.4rem) / 34)); }
+  .lead span { display: block; white-space: nowrap; }
 }
 
 /* -------------------------------------------- Section rows (the grid) */
@@ -602,9 +592,7 @@ button:focus-visible {
   }
 
   .latest-link { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-  .latest-title { font-size: min(3rem, calc((100vw - 3.6rem) / 6.6)); }
-  .masthead-copy { margin-left: 0; }
-}
+  .latest-title { font-size: min(3rem, calc((100vw - 3.6rem) / 6.6)); }}
 
 @media (max-width: 560px) {
   .page { padding-top: 2rem; }
