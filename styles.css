@@ -105,23 +105,44 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   text-transform: uppercase;
 }
 
+/* "PRODUCTIONS" at half the height, light, tracked out to the exact width of
+   "TANZAFF" above it, so the two lines lock up as one block */
 .wordmark span {
   display: block;
-  margin-top: 0.9rem;
-  font-family: var(--mono);
-  font-stretch: 100%;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1;
-  letter-spacing: 0.42em;
+  width: max-content;
+  margin-top: 0.08em;
+  margin-right: -0.21em;
+  font-size: 0.5em;
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: 0.21em;
   color: var(--muted);
+}
+
+/* Motto and intro start on the content column, in line with every section
+   below them */
+.masthead-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-left: calc(var(--label-col) + 2rem);
+}
+
+.motto {
+  margin: 0;
+  font-stretch: 112%;
+  font-weight: 650;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
 }
 
 .lead {
   margin: 0;
-  max-width: 34ch;
-  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
-  line-height: 1.4;
+  max-width: 44ch;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.45;
   text-wrap: balance;
 }
 
@@ -135,6 +156,8 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   margin-bottom: 5rem;
   border-top: 1px solid var(--rule);
 }
+
+.masthead + .block { border-top: 0; padding-top: 0; }
 
 .label {
   margin: 0;
@@ -263,11 +286,10 @@ a:focus-visible .play { opacity: 1; }
   font-stretch: 125%;
   font-weight: 750;
   /* Sized from the meta column so a nine-letter title fits on one line */
-  font-size: min(2.4rem, calc((100vw - 18rem) * 0.4 / 8.4));
-  line-height: 0.95;
+  font-size: min(2.6rem, calc((100vw - 18rem) * 0.4 / 6.6));
+  line-height: 1;
   overflow-wrap: anywhere;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
 }
 
 .latest-note {
@@ -323,11 +345,6 @@ a:focus-visible .play { opacity: 1; }
   margin: 0 0 1rem;
   font-size: 1.02rem;
   line-height: 1.6;
-}
-
-.about p:first-child {
-  font-size: 1.2rem;
-  line-height: 1.5;
 }
 
 .about p:last-child { margin-bottom: 0; }
@@ -585,7 +602,8 @@ button:focus-visible {
   }
 
   .latest-link { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-  .latest-title { font-size: min(3rem, calc((100vw - 3.6rem) / 8.4)); }
+  .latest-title { font-size: min(3rem, calc((100vw - 3.6rem) / 6.6)); }
+  .masthead-copy { margin-left: 0; }
 }
 
 @media (max-width: 560px) {

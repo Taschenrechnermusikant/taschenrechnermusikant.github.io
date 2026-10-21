@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <radialGradient id="bg" cx="35%" cy="30%" r="80%">
-      <stop offset="0" stop-color="#ff8a3d" />
-      <stop offset="0.55" stop-color="#c85a52" />
-      <stop offset="1" stop-color="#ff4d6d" />
-    </radialGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)" />
-  <text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="54"
-        text-anchor="middle" fill="#0e0d0c">T</text>
-  <text x="32" y="48" font-family="'Brush Script MT', 'Segoe Script', cursive" font-style="italic" font-size="22"
-        text-anchor="middle" fill="#f5f1ea" transform="rotate(-14 32 48)">Prod</text>
+  <rect width="64" height="64" rx="6" fill="#121418" />
+  <g>
+    <rect x="0" y="0" width="9.15" height="10" fill="#bfbfbf" />
+    <rect x="9.14" y="0" width="9.15" height="10" fill="#bfbf00" />
+    <rect x="18.28" y="0" width="9.15" height="10" fill="#00bfbf" />
+    <rect x="27.42" y="0" width="9.15" height="10" fill="#00bf00" />
+    <rect x="36.56" y="0" width="9.15" height="10" fill="#bf00bf" />
+    <rect x="45.7" y="0" width="9.15" height="10" fill="#bf0000" />
+    <rect x="54.84" y="0" width="9.16" height="10" fill="#0000bf" />
+  </g>
+  <path d="M7 18h50v11H39v28H25V29H7z" fill="#ebeae4" />
 </svg>
