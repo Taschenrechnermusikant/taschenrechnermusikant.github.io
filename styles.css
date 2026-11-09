@@ -725,3 +725,51 @@ button:focus-visible {
   mask: var(--src) center / contain no-repeat;
   transition: background-color 180ms linear;
 }
+
+/* Synthwave stage behind the monkeys: sun, floor grid, sunlit outline */
+.monkeys {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(4rem, 14vw, 8rem) 0 clamp(4rem, 16vw, 10rem);
+  margin: 5rem 0 3rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(194, 79, 181, 0.07) 70%, transparent 100%);
+}
+.monkeys::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: clamp(4rem, 16vw, 10rem);
+  width: clamp(9rem, 32vw, 18rem);
+  aspect-ratio: 1;
+  transform: translate(-50%, 18%);
+  border-radius: 50%;
+  opacity: 0.55;
+  background: linear-gradient(180deg, #e2c93a 0%, #e8913a 50%, #c24fb5 85%);
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% 52% no-repeat,
+    repeating-linear-gradient(180deg, #000 0 10px, transparent 10px 15px) bottom / 100% 48% no-repeat;
+  mask: linear-gradient(#000 0 0) top / 100% 52% no-repeat,
+    repeating-linear-gradient(180deg, #000 0 10px, transparent 10px 15px) bottom / 100% 48% no-repeat;
+}
+.monkeys::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(4rem, 16vw, 10rem);
+  background: linear-gradient(rgba(18, 20, 24, 0.3), rgba(18, 20, 24, 0.3)),
+    url(monkeys/floor.svg) center top / 100% 100% no-repeat, var(--bg);
+}
+.monkey i { background-color: #121418; }
+.monkey {
+  filter: var(--glow);
+  --glow: drop-shadow(0 0 1px #ffe26a) drop-shadow(0 0 1px #ffe26a) drop-shadow(0 0 2px rgba(246, 196, 72, 0.95))
+    drop-shadow(0 0 7px rgba(232, 145, 58, 0.75)) drop-shadow(0 0 18px rgba(194, 79, 181, 0.5));
+}
+.monkey.is-lit {
+  --glow: drop-shadow(0 0 1px rgba(255, 226, 106, 0.8)) drop-shadow(0 0 2px rgba(246, 196, 72, 0.6))
+    drop-shadow(0 0 6px rgba(232, 145, 58, 0.5)) drop-shadow(0 0 14px rgba(194, 79, 181, 0.25));
+}

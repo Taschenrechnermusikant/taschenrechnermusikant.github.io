@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" preserveAspectRatio="xMidYMin slice">
+<defs>
+<linearGradient id="depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.15"/><stop offset="0.35" stop-color="#fff" stop-opacity="0.8"/><stop offset="1" stop-color="#fff" stop-opacity="0.55"/></linearGradient>
+<linearGradient id="sides" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000"/><stop offset="0.2" stop-color="#fff"/><stop offset="0.8" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<mask id="m"><rect width="1000" height="180" fill="url(#depth)"/><rect width="1000" height="180" fill="url(#sides)" style="mix-blend-mode:multiply"/></mask>
+<mask id="m2"><rect width="1000" height="180" fill="url(#sides)"/></mask>
+</defs>
+<g mask="url(#m2)"><g mask="url(#m)" stroke="#c86a92" stroke-width="1" stroke-opacity="0.55" vector-effect="non-scaling-stroke" fill="none">
+<line x1="333.3" y1="0" x2="-1810.0" y2="180"/>
+<line x1="340.9" y1="0" x2="-1705.0" y2="180"/>
+<line x1="348.5" y1="0" x2="-1600.0" y2="180"/>
+<line x1="356.0" y1="0" x2="-1495.0" y2="180"/>
+<line x1="363.6" y1="0" x2="-1390.0" y2="180"/>
+<line x1="371.2" y1="0" x2="-1285.0" y2="180"/>
+<line x1="378.8" y1="0" x2="-1180.0" y2="180"/>
+<line x1="386.3" y1="0" x2="-1075.0" y2="180"/>
+<line x1="393.9" y1="0" x2="-970.0" y2="180"/>
+<line x1="401.5" y1="0" x2="-865.0" y2="180"/>
+<line x1="409.1" y1="0" x2="-760.0" y2="180"/>
+<line x1="416.6" y1="0" x2="-655.0" y2="180"/>
+<line x1="424.2" y1="0" x2="-550.0" y2="180"/>
+<line x1="431.8" y1="0" x2="-445.0" y2="180"/>
+<line x1="439.4" y1="0" x2="-340.0" y2="180"/>
+<line x1="447.0" y1="0" x2="-235.0" y2="180"/>
+<line x1="454.5" y1="0" x2="-130.0" y2="180"/>
+<line x1="462.1" y1="0" x2="-25.0" y2="180"/>
+<line x1="469.7" y1="0" x2="80.0" y2="180"/>
+<line x1="477.3" y1="0" x2="185.0" y2="180"/>
+<line x1="484.8" y1="0" x2="290.0" y2="180"/>
+<line x1="492.4" y1="0" x2="395.0" y2="180"/>
+<line x1="500.0" y1="0" x2="500.0" y2="180"/>
+<line x1="507.6" y1="0" x2="605.0" y2="180"/>
+<line x1="515.2" y1="0" x2="710.0" y2="180"/>
+<line x1="522.7" y1="0" x2="815.0" y2="180"/>
+<line x1="530.3" y1="0" x2="920.0" y2="180"/>
+<line x1="537.9" y1="0" x2="1025.0" y2="180"/>
+<line x1="545.5" y1="0" x2="1130.0" y2="180"/>
+<line x1="553.0" y1="0" x2="1235.0" y2="180"/>
+<line x1="560.6" y1="0" x2="1340.0" y2="180"/>
+<line x1="568.2" y1="0" x2="1445.0" y2="180"/>
+<line x1="575.8" y1="0" x2="1550.0" y2="180"/>
+<line x1="583.4" y1="0" x2="1655.0" y2="180"/>
+<line x1="590.9" y1="0" x2="1760.0" y2="180"/>
+<line x1="598.5" y1="0" x2="1865.0" y2="180"/>
+<line x1="606.1" y1="0" x2="1970.0" y2="180"/>
+<line x1="613.7" y1="0" x2="2075.0" y2="180"/>
+<line x1="621.2" y1="0" x2="2180.0" y2="180"/>
+<line x1="628.8" y1="0" x2="2285.0" y2="180"/>
+<line x1="636.4" y1="0" x2="2390.0" y2="180"/>
+<line x1="644.0" y1="0" x2="2495.0" y2="180"/>
+<line x1="651.5" y1="0" x2="2600.0" y2="180"/>
+<line x1="659.1" y1="0" x2="2705.0" y2="180"/>
+<line x1="666.7" y1="0" x2="2810.0" y2="180"/>
+<line x1="0" y1="180.0" x2="1000" y2="180.0"/>
+<line x1="0" y1="124.6" x2="1000" y2="124.6"/>
+<line x1="0" y1="85.0" x2="1000" y2="85.0"/>
+<line x1="0" y1="56.7" x2="1000" y2="56.7"/>
+<line x1="0" y1="36.5" x2="1000" y2="36.5"/>
+<line x1="0" y1="22.1" x2="1000" y2="22.1"/>
+<line x1="0" y1="11.8" x2="1000" y2="11.8"/>
+<line x1="0" y1="4.4" x2="1000" y2="4.4"/>
+</g></g>
+<line x1="0" y1="0.5" x2="1000" y2="0.5" stroke="#c86a92" stroke-opacity="0.35" vector-effect="non-scaling-stroke" mask="url(#m2)"/>
+</svg>

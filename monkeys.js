@@ -65,7 +65,7 @@
       var split = energy * 7 * (0.5 + 0.5 * kick);
       monkeys[i].style.filter = split < 0.3 ? "" :
         "drop-shadow(" + split.toFixed(1) + "px 0 0 rgba(58,199,201,0.75)) " +
-        "drop-shadow(" + (-split).toFixed(1) + "px 0 0 rgba(194,79,181,0.75))";
+        "drop-shadow(" + (-split).toFixed(1) + "px 0 0 rgba(194,79,181,0.75)) var(--glow,)";
     }
 
     // Colour: a new one on the beat while the dancing is hot, back to plain at rest.
@@ -74,13 +74,17 @@
         lastBeat = beat;
         lastColorTime = now;
         for (var j = 0; j < monkeys.length; j++) {
+          monkeys[j].classList.add("is-lit");
           monkeys[j].firstElementChild.style.backgroundColor =
             COLORS[(((beat + j * 2) % COLORS.length) + COLORS.length) % COLORS.length];
         }
       }
     } else if (lastBeat !== -1) {
       lastBeat = -1;
-      for (var k = 0; k < monkeys.length; k++) monkeys[k].firstElementChild.style.backgroundColor = "";
+      for (var k = 0; k < monkeys.length; k++) {
+        monkeys[k].classList.remove("is-lit");
+        monkeys[k].firstElementChild.style.backgroundColor = "";
+      }
     }
 
     if (Math.abs(target - shown) > 0.3 || energy > 0.01) {
