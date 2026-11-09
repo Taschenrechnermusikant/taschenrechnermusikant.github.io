@@ -8,6 +8,17 @@
  */
 (function () {
   var monkeys = document.querySelectorAll(".monkey");
+  // Arms, legs and tails that swing on their own (layers marked data-swing).
+  // A data-knee layer only bends one way: from the drawn, bent pose to stretched.
+  var limbs = [];
+  for (var n = 0; n < monkeys.length; n++) {
+    var parts = monkeys[n].querySelectorAll("[data-swing]");
+    limbs[n] = [];
+    for (var q = 0; q < parts.length; q++) {
+      limbs[n].push({ el: parts[q], amp: +parts[q].getAttribute("data-swing"), ph: +parts[q].getAttribute("data-ph"),
+                       knee: parts[q].hasAttribute("data-knee") });
+    }
+  }
   if (!monkeys.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   var BEAT = 150;                      // pixels of scrolling per beat
@@ -31,6 +42,11 @@
   var lastTime = 0;
   var lastColorTime = 0;
   var lastBeat = -1;
+
+  function tint(monkey, colour) {
+    var pieces = monkey.querySelectorAll("i");
+    for (var c = 0; c < pieces.length; c++) pieces[c].style.backgroundColor = colour;
+  }
 
   function frame(now) {
     var dt = Math.min((now - lastTime) / 1000, 0.05);
@@ -57,6 +73,14 @@
       var hop = Math.abs(Math.sin(p)) * m.hop * amount;
       var skew = Math.cos(p) * m.skew * energy;
       var squash = kick * 0.16 * amount;           // everybody ducks on the kick
+      for (var L = 0; L < limbs[i].length; L++) {
+        var limb = limbs[i][L];
+        var wave = Math.sin(p * 2 + limb.ph);
+        var swing = limb.knee
+          ? (0.5 + 0.5 * wave) * limb.amp * (0.6 + 0.4 * energy)
+          : wave * limb.amp * (0.45 + 0.55 * energy) + kick * limb.amp * 0.3 * energy;
+        limb.el.style.transform = "rotate(" + swing.toFixed(2) + "deg)";
+      }
       monkeys[i].style.transform =
         "translate(" + sway.toFixed(2) + "%," + (-hop).toFixed(2) + "%) " +
         "rotate(" + tilt.toFixed(2) + "deg) skewX(" + skew.toFixed(2) + "deg) " +
@@ -75,15 +99,14 @@
         lastColorTime = now;
         for (var j = 0; j < monkeys.length; j++) {
           monkeys[j].classList.add("is-lit");
-          monkeys[j].firstElementChild.style.backgroundColor =
-            COLORS[(((beat + j * 2) % COLORS.length) + COLORS.length) % COLORS.length];
+          tint(monkeys[j], COLORS[(((beat + j * 2) % COLORS.length) + COLORS.length) % COLORS.length]);
         }
       }
     } else if (lastBeat !== -1) {
       lastBeat = -1;
       for (var k = 0; k < monkeys.length; k++) {
         monkeys[k].classList.remove("is-lit");
-        monkeys[k].firstElementChild.style.backgroundColor = "";
+        tint(monkeys[k], "");
       }
     }
 

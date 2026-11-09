@@ -37,7 +37,7 @@
          styles.css or player.js so a reload picks the changes up. -->
     <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=18" />
 
     <script type="application/ld+json">
       {
@@ -551,11 +551,11 @@
       </section>
 
       <div class="monkeys" aria-hidden="true">
-        <span class="monkey" style="--ar: 205 / 360; --src: url(monkeys/monkey-1.png)"><i></i></span>
-        <span class="monkey" style="--ar: 226 / 360; --src: url(monkeys/monkey-2.png)"><i></i></span>
-        <span class="monkey" style="--ar: 208 / 360; --src: url(monkeys/monkey-3.png)"><i></i></span>
-        <span class="monkey" style="--ar: 195 / 360; --src: url(monkeys/monkey-4.png)"><i></i></span>
-        <span class="monkey" style="--ar: 170 / 360; --src: url(monkeys/monkey-5.png)"><i></i></span>
+        <span class="monkey is-rigged" style="--ar: 205 / 360"><i style="--src: url(monkeys/parts/m1-body.png)"></i><i data-swing="28" data-ph="0.0" style="--src: url(monkeys/parts/m1-armR.png); transform-origin: 83.9% 41.7%"></i><i data-swing="-28" data-ph="0.7" style="--src: url(monkeys/parts/m1-armL.png); transform-origin: 50.7% 51.1%"></i><b data-swing="22" data-ph="1.4" style="transform-origin: 80.0% 67.5%"><i style="--src: url(monkeys/parts/m1-legR.png)"></i><b data-swing="-72" data-ph="1.4" data-knee style="transform-origin: 94.6% 67.2%"><i style="--src: url(monkeys/parts/m1-legR-shin.png)"></i></b></b><i data-swing="-26" data-ph="2.1" style="--src: url(monkeys/parts/m1-legL.png); transform-origin: 65.4% 76.7%"></i></span>
+        <span class="monkey is-rigged" style="--ar: 226 / 360"><i style="--src: url(monkeys/parts/m2-body.png)"></i><i data-swing="28" data-ph="0.0" style="--src: url(monkeys/parts/m2-armL.png); transform-origin: 45.1% 45.8%"></i><i data-swing="-28" data-ph="0.7" style="--src: url(monkeys/parts/m2-armR.png); transform-origin: 79.6% 40.6%"></i><i data-swing="22" data-ph="1.4" style="--src: url(monkeys/parts/m2-tail.png); transform-origin: 70.8% 66.7%"></i><b data-swing="-20" data-ph="2.1" style="transform-origin: 51.3% 71.9%"><i style="--src: url(monkeys/parts/m2-legL.png)"></i><b data-swing="60" data-ph="2.1" data-knee style="transform-origin: 40.3% 78.3%"><i style="--src: url(monkeys/parts/m2-legL-shin.png)"></i></b></b></span>
+        <span class="monkey is-rigged" style="--ar: 208 / 360"><i style="--src: url(monkeys/parts/m3-body.png)"></i><i data-swing="28" data-ph="0.0" style="--src: url(monkeys/parts/m3-armL.png); transform-origin: 28.8% 23.9%"></i><i data-swing="-28" data-ph="0.7" style="--src: url(monkeys/parts/m3-armR.png); transform-origin: 85.6% 23.9%"></i><i data-swing="20" data-ph="1.4" style="--src: url(monkeys/parts/m3-legL.png); transform-origin: 39.4% 62.8%"></i><i data-swing="-20" data-ph="2.1" style="--src: url(monkeys/parts/m3-legR.png); transform-origin: 67.3% 62.8%"></i></span>
+        <span class="monkey is-rigged" style="--ar: 195 / 360"><i style="--src: url(monkeys/parts/m4-body.png)"></i><i data-swing="28" data-ph="0.0" style="--src: url(monkeys/parts/m4-armUp.png); transform-origin: 32.8% 35.6%"></i><i data-swing="-28" data-ph="0.7" style="--src: url(monkeys/parts/m4-armR.png); transform-origin: 63.6% 52.8%"></i><i data-swing="22" data-ph="1.4" style="--src: url(monkeys/parts/m4-tail.png); transform-origin: 67.7% 69.4%"></i><i data-swing="-20" data-ph="2.1" style="--src: url(monkeys/parts/m4-legL.png); transform-origin: 40.0% 72.8%"></i><i data-swing="20" data-ph="2.8" style="--src: url(monkeys/parts/m4-legR.png); transform-origin: 56.4% 75.6%"></i></span>
+        <span class="monkey is-rigged" style="--ar: 170 / 360"><i style="--src: url(monkeys/parts/m5-body.png)"></i><i data-swing="28" data-ph="0.0" style="--src: url(monkeys/parts/m5-armUp.png); transform-origin: 41.2% 34.4%"></i><i data-swing="-28" data-ph="0.7" style="--src: url(monkeys/parts/m5-armR.png); transform-origin: 81.2% 47.2%"></i><i data-swing="20" data-ph="1.4" style="--src: url(monkeys/parts/m5-legL.png); transform-origin: 50.6% 77.8%"></i><i data-swing="-20" data-ph="2.1" style="--src: url(monkeys/parts/m5-legR.png); transform-origin: 60.0% 77.8%"></i></span>
       </div>
 
       <footer class="footer">
@@ -568,7 +568,7 @@
     </main>
 
     <script src="player.js?v=10" defer></script>
-    <script src="monkeys.js?v=2" defer></script>
+    <script src="monkeys.js?v=3" defer></script>
     <script data-goatcounter="https://tanzaff.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
   </body>
