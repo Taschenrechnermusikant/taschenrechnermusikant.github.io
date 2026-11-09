@@ -22,7 +22,6 @@ Then visit http://localhost:8000
 | `player.js` | Opens a track in a player on the page instead of sending the visitor to YouTube |
 | `favicon.svg` | Tab icon and browser mark, site palette |
 | `apple-touch-icon.png` | 180x180 home-screen icon, rendered from the favicon |
-| `og-card.png` | 1200x630 share card used for link previews |
 | `robots.txt` | Crawler rules, points to `sitemap.xml` |
 | `sitemap.xml` | Single-entry sitemap for the site |
 | `404.html` | Branded not-found page, served automatically by GitHub Pages |
