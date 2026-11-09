@@ -20,6 +20,8 @@ Then visit http://localhost:8000
 | `index.html` | All the content: hero, Featured, About, All tracks, Collaborations, Studio, Listen, footer |
 | `styles.css` | All the styling. Colors are variables at the top |
 | `player.js` | Opens a track in a player on the page instead of sending the visitor to YouTube |
+| `monkeys.js` | Makes the monkeys above the footer dance while the visitor scrolls |
+| `monkeys/` | The five monkey silhouettes, cut out of the T-shirt artwork |
 | `favicon.svg` | Tab icon and browser mark, site palette |
 | `apple-touch-icon.png` | 180x180 home-screen icon, rendered from the favicon |
 | `robots.txt` | Crawler rules, points to `sitemap.xml` |
