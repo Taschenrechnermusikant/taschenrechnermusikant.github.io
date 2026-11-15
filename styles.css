@@ -25,6 +25,8 @@
   --muted: #8e939b;
   --rule: #2a2e35;
   --signal: #e2c93a;    /* colour-bar yellow: links, focus, play */
+  --cyan: #3ac7c9;      /* colour-bar cyan and magenta: history page diagrams only */
+  --magenta: #c24fb5;
 
   --sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono: "Martian Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -778,3 +780,492 @@ button:focus-visible {
 .monkey.is-rigged { position: relative; }
 .monkey.is-rigged i,
 .monkey.is-rigged b { display: block; position: absolute; inset: 0; will-change: transform; }
+
+/* ================================================================
+   HISTORY: the techno history (techno/index.html) and its teaser on
+   the home page. Same grid, rows and type as the rest of the site.
+   ================================================================ */
+
+/* Links inside running text */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.about a,
+.story-body a:not(.listen) {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.about a:hover,
+.about a:focus-visible,
+.story-body a:not(.listen):hover,
+.story-body a:not(.listen):focus-visible { color: var(--signal); }
+
+/* --- Home page teaser --- */
+.screen-43 { aspect-ratio: 4 / 3; }
+
+.screen-43::after {
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+.teaser-title {
+  font-stretch: 125%;
+  font-weight: 750;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.teaser-cta {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.latest-link:hover .teaser-cta,
+.latest-link:focus-visible .teaser-cta { text-decoration: underline; text-underline-offset: 0.25em; }
+
+.chapter-links {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--rule);
+}
+
+.chapter-links a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  height: 100%;
+  padding: 0.85rem 1rem 0.85rem 0;
+  color: var(--ink);
+  text-decoration: none;
+  font-stretch: 112%;
+  font-weight: 650;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.chapter-links a:hover,
+.chapter-links a:focus-visible { color: var(--signal); }
+
+/* --- Article masthead --- */
+
+/* "A HISTORY IN 4/4" is about 10.3em long against TECHNO's 5.43em, so at 0.4em
+   and 0.218em tracking it spans exactly the width of TECHNO, the same lockup
+   as TANZAFF / PRODUCTIONS */
+.wordmark-story span {
+  font-size: 0.4em;
+  letter-spacing: 0.218em;
+  margin-right: -0.218em;
+}
+
+.lead-wrap {
+  margin: 2.5rem 0 0;
+  max-width: 34em;
+  font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+  font-weight: 450;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+/* --- Contents --- */
+.contents {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contents li { border-top: 1px solid var(--rule); }
+.contents li:first-child { border-top: 0; }
+
+.contents a {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contents li:first-child a { padding-top: 0; }
+
+.contents-title {
+  font-stretch: 112%;
+  font-weight: 650;
+  font-size: 1.1rem;
+}
+
+.contents-dek {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contents a:hover .contents-title,
+.contents a:focus-visible .contents-title { color: var(--signal); }
+
+/* --- Chapter openers --- */
+.chapter-head {
+  display: grid;
+  grid-template-columns: var(--label-col) minmax(0, 1fr);
+  gap: 2rem;
+  padding-top: 1.25rem;
+  margin: 0 0 4rem;
+  border-top: 1px solid var(--ink);
+  scroll-margin-top: 1.5rem;
+}
+
+.chapter-num {
+  margin: 0;
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--signal);
+  font-variant-numeric: tabular-nums;
+}
+
+.chapter-title {
+  margin: 0;
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5.2vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.chapter-dek {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* --- Story blocks: label column on the left, story on the right --- */
+.story-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Size and leading are set on the column and inherited, so classed text inside
+   (timecodes, labels, the big number) keeps its own size */
+.story-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.story-title {
+  margin: 0;
+  font-stretch: 112%;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.story-body p {
+  margin: 0;
+  max-width: 60ch;
+}
+
+.closing {
+  font-stretch: 112%;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--signal);
+}
+
+.story-body .muted,
+.story-body p.muted { color: var(--muted); }
+
+.hl { color: var(--signal); }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.split > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.split-clip { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+
+/* Fact rows, the same hairline rows as the Studio list */
+.facts { margin: 0; }
+
+.facts > div {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.facts > div:first-child { border-top: 0; padding-top: 0; }
+
+.facts dt {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.2rem;
+}
+
+.facts dd {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.facts-stack > div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+.facts-years > div { grid-template-columns: 4rem minmax(0, 1fr); gap: 1rem; }
+
+.facts-big dd {
+  font-stretch: 125%;
+  font-weight: 750;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.facts-big .was dd { color: var(--muted); }
+
+.worth { border-top: 1px solid var(--rule); padding-top: 0.75rem; }
+.worth dd { color: var(--muted); }
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+
+.data {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.data th {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0 1rem 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.data td {
+  padding: 0.7rem 1rem 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.data .key { color: var(--signal); font-weight: 600; }
+.data .yr { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* People */
+.people {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.people > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+.people h4 {
+  margin: 0;
+  font-stretch: 112%;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.story-body .people p { font-size: 0.92rem; line-height: 1.5; }
+
+/* Big number */
+.stat {
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--signal);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Pull quote: the page's one band of colour */
+.pullquote {
+  margin: 0 0 5rem;
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  background: var(--signal);
+  color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pullquote .label { color: var(--bg); }
+
+.pullquote blockquote {
+  margin: 0;
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.6vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.pullquote figcaption { font-weight: 600; font-size: 1rem; }
+
+/* Clips */
+.clip { margin: 0; }
+
+.clip video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  background: #000;
+}
+
+.clip figcaption { margin-top: 0.6rem; }
+
+/* Transatlantic exchange: America left, Europe and Japan right */
+.exchange {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 6.5rem minmax(0, 1fr);
+}
+
+.exchange > * {
+  margin: 0;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.story-body .exchange p { font-size: 0.95rem; line-height: 1.45; }
+.exchange .to-right { text-align: right; }
+.exchange .ex-head { border-top: 0; padding-top: 0; }
+
+.ex-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ex-mid svg { width: 3.5rem; height: 1rem; }
+.east path { fill: var(--signal); }
+.west path { fill: var(--cyan); }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.92rem;
+}
+
+.legend span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.swatch { width: 0.8rem; height: 0.8rem; }
+
+/* Bar chart */
+.chart-wrap { overflow-x: auto; }
+
+.chart-wrap svg {
+  display: block;
+  width: 100%;
+  min-width: 36rem;
+  height: auto;
+}
+
+.chart-wrap text { font-family: var(--mono); fill: var(--muted); }
+
+/* Self-test */
+.quiz { border-top: 1px solid var(--rule); }
+.quiz:last-of-type { border-bottom: 1px solid var(--rule); }
+
+.quiz summary {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) 1.5rem;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.quiz summary::-webkit-details-marker { display: none; }
+
+.quiz summary::after {
+  content: "+";
+  font-family: var(--mono);
+  color: var(--signal);
+  text-align: right;
+}
+
+.quiz[open] summary::after { content: "\2212"; }
+.story-body .quiz p { padding: 0 0 1rem 3.5rem; color: var(--signal); }
+
+.quiz summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+
+@media (max-width: 820px) {
+  .chapter-head { grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-bottom: 3rem; }
+  .split, .split-clip { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+  .people { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .chapter-links { grid-template-columns: minmax(0, 1fr); }
+  .chapter-links a { flex-direction: row; gap: 1rem; padding-right: 0; border-top: 1px solid var(--rule); }
+  .chapter-links li:first-child a { border-top: 0; }
+}
+
+@media (max-width: 560px) {
+  .facts > div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .facts-years > div { grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1rem; }
+  .exchange { grid-template-columns: minmax(0, 1fr) 4.25rem minmax(0, 1fr); }
+  .story-body .exchange p { font-size: 0.82rem; }
+  .ex-mid svg { width: 2.5rem; }
+  .story-body .quiz p { padding-left: 0; }
+  .contents a { grid-template-columns: 2.25rem minmax(0, 1fr); }
+  .contents a .tc:last-child { display: none; }
+}

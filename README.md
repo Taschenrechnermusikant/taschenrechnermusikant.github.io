@@ -1,6 +1,7 @@
 # Tanzaff Productions
 
-A single-page site for the Tanzaff Productions music project. Plain HTML, CSS and one small
+The site for the Tanzaff Productions music project: the home page plus one article,
+a history of techno. Plain HTML, CSS and one small
 JavaScript file. No build step, no framework, no dependencies.
 
 ## Preview locally
@@ -17,7 +18,9 @@ Then visit http://localhost:8000
 
 | File | What it does |
 | --- | --- |
-| `index.html` | All the content: hero, Featured, About, All tracks, Collaborations, Studio, Listen, footer |
+| `index.html` | The home page: hero, Featured, About, Techno history teaser, All tracks, Collaborations, Studio, Listen, footer |
+| `techno/index.html` | The article *Techno, a history in 4/4*, in five chapters |
+| `techno/media/` | The article's two clips with sound, their poster frames, and its link-preview image `og.jpg` |
 | `styles.css` | All the styling. Colors are variables at the top |
 | `player.js` | Opens a track in a player on the page instead of sending the visitor to YouTube |
 | `monkeys.js` | Makes the monkeys above the footer dance while the visitor scrolls |
@@ -26,13 +29,15 @@ Then visit http://localhost:8000
 | `favicon.svg` | Tab icon and browser mark, site palette |
 | `apple-touch-icon.png` | 180x180 home-screen icon, rendered from the favicon |
 | `robots.txt` | Crawler rules, points to `sitemap.xml` |
-| `sitemap.xml` | Single-entry sitemap for the site |
+| `sitemap.xml` | Sitemap: the home page and the techno article |
 | `404.html` | Branded not-found page, served automatically by GitHub Pages |
 
 ## Page structure
 
 - **Featured**: three large cards for the tracks worth leading with.
 - **About**: who Tanzaff Productions is, in three short paragraphs.
+- **Techno history**: a teaser for `techno/`, with links straight into its five chapters
+  (`#roots`, `#machines`, `#exchange`, `#since`, `#your-turn`).
 - **All tracks**: the full Tanzaff catalogue, newest first, one row per track.
 - **Collaborations**: tracks posted on someone else's channel (the Regata Collective ones).
 - **Studio**: the hardware and studios behind the tracks, grouped by synths, drums and sampling, and studios.
@@ -113,3 +118,17 @@ Nothing is loaded from YouTube until someone presses play, and the player uses
 `youtube-nocookie.com`. Escape or a click outside closes it and stops playback.
 
 Ctrl-click, middle-click and "open in new tab" are left alone and go to YouTube as normal.
+
+## The techno article
+
+`techno/index.html` uses the same stylesheet and the same building blocks as the home page:
+the masthead lockup, the label-column grid (`.block`), the hairline rows (`.facts`, like the
+Studio list) and the footer with the monkeys. Its own pieces are in the **HISTORY** part at the
+end of `styles.css`.
+
+It lives one folder down, so every path to a shared file starts with `../` (styles, fonts,
+favicon, `monkeys.js`, the monkey pictures). The two clips are plain `<video>` files in
+`techno/media/` and only load when someone presses play.
+
+Each chapter starts with a `<header class="chapter-head" id="...">`; the home page teaser links
+to those ids, so keep them stable when editing.
