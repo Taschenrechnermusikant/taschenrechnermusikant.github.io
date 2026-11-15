@@ -18,7 +18,7 @@ Then visit http://localhost:8000
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The home page: hero, Featured, About, Techno history teaser, All tracks, Collaborations, Studio, Listen, footer |
+| `index.html` | The home page: hero, Featured, About, All tracks, Collaborations, Techno history teaser, Studio, Listen, footer |
 | `techno/index.html` | The article *Techno, a history in 4/4*, in five chapters |
 | `techno/media/` | The article's two clips with sound, their poster frames, and its link-preview image `og.jpg` |
 | `styles.css` | All the styling. Colors are variables at the top |
@@ -36,10 +36,10 @@ Then visit http://localhost:8000
 
 - **Featured**: three large cards for the tracks worth leading with.
 - **About**: who Tanzaff Productions is, in three short paragraphs.
-- **Techno history**: a teaser for `techno/`, with links straight into its five chapters
-  (`#roots`, `#machines`, `#exchange`, `#since`, `#your-turn`).
 - **All tracks**: the full Tanzaff catalogue, newest first, one row per track.
 - **Collaborations**: tracks posted on someone else's channel (the Regata Collective ones).
+- **Techno history**: after the songs, a short note on why it is there and a teaser for `techno/`, with links straight into its five chapters
+  (`#roots`, `#machines`, `#exchange`, `#since`, `#your-turn`).
 - **Studio**: the hardware and studios behind the tracks, grouped by synths, drums and sampling, and studios.
 - **Listen**, footer.
 
