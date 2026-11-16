@@ -1302,3 +1302,4 @@ button:focus-visible {
 .chart-wrap.tree svg.hl g.n.on { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .chart-wrap.tree path, .chart-wrap.tree g.n { transition: none; } }
 .data td.yr { white-space: nowrap; }
+.story-body .chart-wrap.tree a, .story-body .chart-wrap.tree a:hover, .story-body .chart-wrap.tree a:focus-visible { text-decoration: none; }
