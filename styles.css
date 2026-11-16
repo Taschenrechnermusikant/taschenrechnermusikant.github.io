@@ -1294,3 +1294,9 @@ button:focus-visible {
 /* Family tree: Tanzaff branches traced back */
 .chart-wrap.tree svg { min-width: 50rem; }
 .chart-wrap.tree text { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
+.chart-wrap.tree path, .chart-wrap.tree g.n { transition: opacity 0.15s; }
+.chart-wrap.tree svg.hl path { opacity: 0.07 !important; }
+.chart-wrap.tree svg.hl path.on { opacity: 1 !important; stroke-width: 3; }
+.chart-wrap.tree svg.hl g.n { opacity: 0.25; }
+.chart-wrap.tree svg.hl g.n.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .chart-wrap.tree path, .chart-wrap.tree g.n { transition: none; } }
