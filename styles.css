@@ -1290,3 +1290,7 @@ button:focus-visible {
 @media (max-width: 560px) { .photo-pair { grid-template-columns: 1fr; } }
 .photo-flyer { max-width: 22rem; }
 .photo-flyer img { aspect-ratio: auto; object-fit: contain; filter: none; }
+
+/* Family tree: Tanzaff branches traced back */
+.chart-wrap.tree svg { min-width: 50rem; }
+.chart-wrap.tree text { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }

@@ -29,7 +29,7 @@
 
     <link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="../fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="../styles.css?v=27" />
+    <link rel="stylesheet" href="../styles.css?v=28" />
   </head>
   <body>
     <!-- EBU colour bars at 75%: white, yellow, cyan, green, magenta, red, blue -->
@@ -61,83 +61,103 @@
 
       <!-- The whole route at a glance, before the chapters -->
       <section class="block" aria-labelledby="tree-heading">
-        <div class="story-label"><p class="label label-signal">The family tree</p><p class="tc">1970&ndash;today</p></div>
+        <div class="story-label"><p class="label label-signal">The family tree</p><p class="tc">1973&ndash;today</p></div>
         <div class="story-body">
-          <h3 id="tree-heading" class="story-title">Who fed whom</h3>
-          <div class="chart-wrap lineage">
-            <svg viewBox="0 0 1000 492" role="img" aria-labelledby="tree-title tree-desc">
-              <title id="tree-title">Family tree of techno, 1970 to today, in seven strands</title>
-              <desc id="tree-desc">Funk and disco from 1973, German machine music from 1972, EBM and New Beat from 1981, Italo disco from 1982, Detroit and Chicago from 1984, European clubs from 1988, and Tanzaff Productions from 2017 to today. Every strand except Tanzaff carries on, shown dotted, past 2000.</desc>
-              <line x1="150.0" y1="34" x2="150.0" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="150.0" y="24" font-size="13" text-anchor="middle">1970</text>
-              <line x1="366.7" y1="34" x2="366.7" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="366.7" y="24" font-size="13" text-anchor="middle">1980</text>
-              <line x1="583.3" y1="34" x2="583.3" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="583.3" y="24" font-size="13" text-anchor="middle">1990</text>
-              <line x1="800.0" y1="34" x2="800.0" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="800.0" y="24" font-size="13" text-anchor="middle">2000</text>
-              <line x1="867.1" y1="34" x2="867.1" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="867.1" y="24" font-size="13" text-anchor="middle">2010</text>
-              <line x1="934.2" y1="34" x2="934.2" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="934.2" y="24" font-size="13" text-anchor="middle">2020</text>
-              <text x="0" y="90" font-size="13" style="fill: var(--muted)" >FUNK &AMP; DISCO</text>
-              <line x1="191.0" y1="86" x2="325.7" y2="86" style="stroke: var(--signal)" stroke-width="3" opacity="0.35"/>
-              <line x1="325.7" y1="86" x2="974.5" y2="86" style="stroke: var(--signal)" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.4"/>
-              <circle cx="215.0" cy="86" r="5" style="fill: var(--signal)"/>
-              <text x="215.0" y="72" font-size="13" text-anchor="middle" style="fill: var(--ink)">The Love I Lost</text>
-              <circle cx="301.7" cy="86" r="5" style="fill: var(--signal)"/>
-              <text x="301.7" y="112" font-size="13" text-anchor="middle" style="fill: var(--ink)">Warehouse, Chicago</text>
-              <text x="0" y="150" font-size="13" style="fill: var(--muted)" >GERMANY</text>
-              <line x1="169.3" y1="146" x2="412.3" y2="146" style="stroke: var(--cyan)" stroke-width="3" opacity="0.35"/>
-              <line x1="412.3" y1="146" x2="974.5" y2="146" style="stroke: var(--cyan)" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.4"/>
-              <circle cx="193.3" cy="146" r="5" style="fill: var(--cyan)"/>
-              <text x="193.3" y="132" font-size="13" text-anchor="middle" style="fill: var(--ink)">Hallogallo</text>
-              <circle cx="301.7" cy="146" r="5" style="fill: var(--cyan)"/>
-              <text x="301.7" y="172" font-size="13" text-anchor="middle" style="fill: var(--ink)">Trans-Europe Express</text>
-              <circle cx="388.3" cy="146" r="5" style="fill: var(--cyan)"/>
-              <text x="388.3" y="132" font-size="13" text-anchor="middle" style="fill: var(--ink)">E2-E4</text>
-              <text x="0" y="210" font-size="13" style="fill: var(--muted)" >EBM &AMP; NEW BEAT</text>
-              <line x1="364.3" y1="206" x2="542.3" y2="206" style="stroke: var(--magenta)" stroke-width="3" opacity="0.35"/>
-              <line x1="542.3" y1="206" x2="974.5" y2="206" style="stroke: var(--magenta)" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.4"/>
-              <circle cx="388.3" cy="206" r="5" style="fill: var(--magenta)"/>
-              <text x="388.3" y="192" font-size="13" text-anchor="middle" style="fill: var(--ink)">DAF</text>
-              <circle cx="453.3" cy="206" r="5" style="fill: var(--magenta)"/>
-              <text x="453.3" y="232" font-size="13" text-anchor="middle" style="fill: var(--ink)">Front 242</text>
-              <circle cx="518.3" cy="206" r="5" style="fill: var(--magenta)"/>
-              <text x="518.3" y="192" font-size="13" text-anchor="middle" style="fill: var(--ink)">New Beat</text>
-              <text x="0" y="270" font-size="13" style="fill: var(--muted)" >ITALO DISCO</text>
-              <line x1="386.0" y1="266" x2="455.7" y2="266" style="stroke: var(--green)" stroke-width="3" opacity="0.35"/>
-              <line x1="455.7" y1="266" x2="974.5" y2="266" style="stroke: var(--green)" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.4"/>
-              <circle cx="410.0" cy="266" r="5" style="fill: var(--green)"/>
-              <text x="410.0" y="252" font-size="13" text-anchor="middle" style="fill: var(--ink)">Dirty Talk</text>
-              <circle cx="431.7" cy="266" r="5" style="fill: var(--green)"/>
-              <text x="431.7" y="292" font-size="13" text-anchor="middle" style="fill: var(--ink)">ZYX names it</text>
-              <text x="0" y="330" font-size="13" style="fill: var(--muted)" >DETROIT &AMP; CHICAGO</text>
-              <line x1="429.3" y1="326" x2="542.3" y2="326" style="stroke: var(--red)" stroke-width="3" opacity="0.35"/>
-              <line x1="542.3" y1="326" x2="974.5" y2="326" style="stroke: var(--red)" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.4"/>
-              <circle cx="453.3" cy="326" r="5" style="fill: var(--red)"/>
-              <text x="453.3" y="312" font-size="13" text-anchor="middle" style="fill: var(--ink)">Techno City</text>
-              <circle cx="518.3" cy="326" r="5" style="fill: var(--red)"/>
-              <text x="518.3" y="352" font-size="13" text-anchor="middle" style="fill: var(--ink)">Acid Tracks / Strings of Life</text>
-              <text x="0" y="390" font-size="13" style="fill: var(--muted)" >EUROPE</text>
-              <line x1="516.0" y1="386" x2="672.3" y2="386" style="stroke: var(--ink)" stroke-width="3" opacity="0.35"/>
-              <line x1="672.3" y1="386" x2="974.5" y2="386" style="stroke: var(--ink)" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.4"/>
-              <circle cx="540.0" cy="386" r="5" style="fill: var(--ink)"/>
-              <text x="540.0" y="372" font-size="13" text-anchor="middle" style="fill: var(--ink)">Techno!</text>
-              <circle cx="605.0" cy="386" r="5" style="fill: var(--ink)"/>
-              <text x="605.0" y="412" font-size="13" text-anchor="middle" style="fill: var(--ink)">Tresor</text>
-              <circle cx="648.3" cy="386" r="5" style="fill: var(--ink)"/>
-              <text x="648.3" y="372" font-size="13" text-anchor="middle" style="fill: var(--ink)">Basic Channel</text>
-              <text x="0" y="450" font-size="13" style="fill: var(--signal)" font-weight="700">TANZAFF</text>
-              <rect x="914.0" y="442" width="60.5" height="8" style="fill: var(--signal)"/>
-              <circle cx="920.7" cy="446" r="6" style="fill: var(--signal)"/>
-              <text x="920.7" y="432" font-size="13" text-anchor="middle" style="fill: var(--signal)">Burning Desire</text>
-              <circle cx="974.5" cy="446" r="6" style="fill: var(--signal)"/>
-              <text x="978.5" y="472" font-size="13" text-anchor="end" style="fill: var(--signal)">Technauto, Slow Hope</text>
-            </svg>
+          <h3 id="tree-heading" class="story-title">Where Tanzaff comes from</h3>
+          <p>Twenty-one Tanzaff tracks in seven branches, each traced back to the records it descends from. None of it was invented here.</p>
+          <div class="chart-wrap tree">
+<svg viewBox="0 0 1110 850" role="img" aria-labelledby="tree-title tree-desc">
+<title id="tree-title">Where Tanzaff comes from</title>
+<desc id="tree-desc">Twenty-one Tanzaff tracks grouped in seven branches on the left, each traced back through the records it descends from to the 1970s on the right.</desc>
+<text x="125" y="14" font-size="12" text-anchor="middle" style="fill:var(--signal)">Tanzaff</text>
+<text x="420" y="14" font-size="12" text-anchor="middle" style="fill:var(--muted)">1990s</text>
+<text x="660" y="14" font-size="12" text-anchor="middle" style="fill:var(--muted)">1980s</text>
+<text x="910" y="14" font-size="12" text-anchor="middle" style="fill:var(--muted)">1970s</text>
+<path d="M250,85 C325.0,85 325.0,80 400,80" fill="none" style="stroke:var(--red)" stroke-width="3" opacity="0.9"/>
+<path d="M400,80 C525.0,80 525.0,45 650,45" fill="none" style="stroke:var(--red)" stroke-width="3" opacity="0.9"/>
+<path d="M400,80 C520.0,80 520.0,150 640,150" fill="none" style="stroke:var(--red)" stroke-width="3" opacity="0.9"/>
+<path d="M650,45 C790.0,45 790.0,45 930,45" fill="none" style="stroke:var(--red)" stroke-width="3" opacity="0.9"/>
+<path d="M640,150 C785.0,150 785.0,285 930,285" fill="none" style="stroke:var(--muted)" stroke-width="3" opacity="0.9"/>
+<path d="M250,220 C450.0,220 450.0,235 650,235" fill="none" style="stroke:var(--green)" stroke-width="3" opacity="0.9"/>
+<path d="M650,235 C765.0,235 765.0,195 880,195" fill="none" style="stroke:var(--green)" stroke-width="3" opacity="0.9"/>
+<path d="M650,235 C790.0,235 790.0,535 930,535" fill="none" style="stroke:var(--green)" stroke-width="3" opacity="0.9"/>
+<path d="M250,320 C335.0,320 335.0,320 420,320" fill="none" style="stroke:#4a78d8" stroke-width="3" opacity="0.9"/>
+<path d="M420,320 C530.0,320 530.0,150 640,150" fill="none" style="stroke:#4a78d8" stroke-width="3" opacity="0.9"/>
+<path d="M420,320 C670.0,320 670.0,355 920,355" fill="none" style="stroke:#4a78d8" stroke-width="3" opacity="0.9"/>
+<path d="M250,440 C590.0,440 590.0,445 930,445" fill="none" style="stroke:#d8913a" stroke-width="3" opacity="0.9"/>
+<text x="590.0" y="434.5" font-size="11" font-style="italic" text-anchor="middle" style="fill:#d8913a">Tacoma Bridge: on repeat in the teenage years</text>
+<path d="M250,570 C340.0,570 340.0,570 430,570" fill="none" style="stroke:var(--magenta)" stroke-width="3" opacity="0.9"/>
+<path d="M430,570 C555.0,570 555.0,570 680,570" fill="none" style="stroke:var(--magenta)" stroke-width="3" opacity="0.9"/>
+<path d="M680,570 C805.0,570 805.0,535 930,535" fill="none" style="stroke:var(--magenta)" stroke-width="3" opacity="0.9"/>
+<path d="M250,670 C335.0,670 335.0,655 420,655" fill="none" style="stroke:var(--cyan)" stroke-width="3" opacity="0.9"/>
+<path d="M250,670 C340.0,670 340.0,715 430,715" fill="none" style="stroke:var(--cyan)" stroke-width="3" opacity="0.9" stroke-dasharray="5 5"/>
+<path d="M420,655 C560.0,655 560.0,680 700,680" fill="none" style="stroke:var(--cyan)" stroke-width="3" opacity="0.9"/>
+<path d="M700,680 C815.0,680 815.0,285 930,285" fill="none" style="stroke:var(--cyan)" stroke-width="3" opacity="0.9"/>
+<path d="M250,770 C445.0,770 445.0,765 640,765" fill="none" style="stroke:var(--ink)" stroke-width="3" opacity="0.9"/>
+<path d="M250,770 C590.0,770 590.0,815 930,815" fill="none" style="stroke:var(--ink)" stroke-width="3" opacity="0.9"/>
+<rect x="8" y="22.5" width="242" height="125" rx="3" style="fill:var(--panel);stroke:var(--red)" stroke-width="1.5"/>
+<text x="18" y="38.5" font-size="11" style="fill:var(--red)">HOUSE, TECH HOUSE</text>
+<a href="https://www.youtube.com/watch?v=-9VJNBk3ibA" target="_blank" rel="noopener"><title>Tanzaff Productions, Technauto</title><text x="18" y="57.5" font-size="13" font-weight="700" style="fill:var(--signal)">Technauto</text></a>
+<a href="https://www.youtube.com/watch?v=Pt-YXccLmtc" target="_blank" rel="noopener"><title>Tanzaff Productions, Liebi</title><text x="18" y="76.5" font-size="13" font-weight="700" style="fill:var(--signal)">Liebi</text></a>
+<a href="https://www.youtube.com/watch?v=GXVdYNUtczI" target="_blank" rel="noopener"><title>Tanzaff Productions, Light Weight Baby</title><text x="18" y="95.5" font-size="13" font-weight="700" style="fill:var(--signal)">Light Weight Baby</text></a>
+<a href="https://www.youtube.com/watch?v=Hdx8MwqEWao" target="_blank" rel="noopener"><title>Tanzaff Productions, Tanzschuel</title><text x="18" y="114.5" font-size="13" font-weight="700" style="fill:var(--signal)">Tanzschuel</text></a>
+<a href="https://www.youtube.com/watch?v=dK4RhFAFnJU" target="_blank" rel="noopener"><title>Tanzaff Productions, Globus (collaboration)</title><text x="18" y="133.5" font-size="13" font-weight="700" style="fill:var(--signal)">Globus<tspan font-weight='400' style='fill:var(--muted)'> collab</tspan></text></a>
+<circle cx="250" cy="85" r="5" style="fill:var(--red)"/>
+<rect x="8" y="186.0" width="242" height="68" rx="3" style="fill:var(--panel);stroke:var(--green)" stroke-width="1.5"/>
+<text x="18" y="202.0" font-size="11" style="fill:var(--green)">ITALO DISCO</text>
+<a href="https://www.youtube.com/watch?v=p9fLxm0uN0k" target="_blank" rel="noopener"><title>Tanzaff Productions, Burning Desire</title><text x="18" y="221.0" font-size="13" font-weight="700" style="fill:var(--signal)">Burning Desire</text></a>
+<a href="https://www.youtube.com/watch?v=7iyFu_gqhxM" target="_blank" rel="noopener"><title>Tanzaff Productions, Ditemi perchè (collaboration)</title><text x="18" y="240.0" font-size="13" font-weight="700" style="fill:var(--signal)">Ditemi perchè<tspan font-weight='400' style='fill:var(--muted)'> collab</tspan></text></a>
+<circle cx="250" cy="220" r="5" style="fill:var(--green)"/>
+<rect x="8" y="286.0" width="242" height="68" rx="3" style="fill:var(--panel);stroke:#4a78d8" stroke-width="1.5"/>
+<text x="18" y="302.0" font-size="11" style="fill:#4a78d8">DARK TECHNO, DUB</text>
+<a href="https://www.youtube.com/watch?v=RQVVHtpJSL0" target="_blank" rel="noopener"><title>Tanzaff Productions, Slow Hope</title><text x="18" y="321.0" font-size="13" font-weight="700" style="fill:var(--signal)">Slow Hope</text></a>
+<a href="https://www.youtube.com/watch?v=yj26BISVT1g" target="_blank" rel="noopener"><title>Tanzaff Productions, Extrasolar Lullaby (collaboration)</title><text x="18" y="340.0" font-size="13" font-weight="700" style="fill:var(--signal)">Extrasolar Lullaby<tspan font-weight='400' style='fill:var(--muted)'> collab</tspan></text></a>
+<circle cx="250" cy="320" r="5" style="fill:#4a78d8"/>
+<rect x="8" y="387.0" width="242" height="106" rx="3" style="fill:var(--panel);stroke:#d8913a" stroke-width="1.5"/>
+<text x="18" y="403.0" font-size="11" style="fill:#d8913a">BERLIN SCHOOL, HYPNOTIC</text>
+<a href="https://www.youtube.com/watch?v=XvUxfwfH7Dw" target="_blank" rel="noopener"><title>Tanzaff Productions, Tacoma Bridge</title><text x="18" y="422.0" font-size="13" font-weight="700" style="fill:var(--signal)">Tacoma Bridge</text></a>
+<a href="https://www.youtube.com/watch?v=-9qbWjIKbq8" target="_blank" rel="noopener"><title>Tanzaff Productions, Communism</title><text x="18" y="441.0" font-size="13" font-weight="700" style="fill:var(--signal)">Communism</text></a>
+<a href="https://www.youtube.com/watch?v=xjWob1KpJIE" target="_blank" rel="noopener"><title>Tanzaff Productions, Universe version 1 (collaboration)</title><text x="18" y="460.0" font-size="13" font-weight="700" style="fill:var(--signal)">Universe version 1<tspan font-weight='400' style='fill:var(--muted)'> collab</tspan></text></a>
+<a href="https://www.youtube.com/watch?v=H94bcsTDnZM" target="_blank" rel="noopener"><title>Tanzaff Productions, Universe part 2 (collaboration)</title><text x="18" y="479.0" font-size="13" font-weight="700" style="fill:var(--signal)">Universe part 2<tspan font-weight='400' style='fill:var(--muted)'> collab</tspan></text></a>
+<circle cx="250" cy="440" r="5" style="fill:#d8913a"/>
+<rect x="8" y="526.5" width="242" height="87" rx="3" style="fill:var(--panel);stroke:var(--magenta)" stroke-width="1.5"/>
+<text x="18" y="542.5" font-size="11" style="fill:var(--magenta)">EBM, DARK ELECTRO</text>
+<a href="https://www.youtube.com/watch?v=pJLd4cqbfHw" target="_blank" rel="noopener"><title>Tanzaff Productions, Brainf**k</title><text x="18" y="561.5" font-size="13" font-weight="700" style="fill:var(--signal)">Brainf**k</text></a>
+<a href="https://www.youtube.com/watch?v=FuIAWa-Lnl0" target="_blank" rel="noopener"><title>Tanzaff Productions, Schattenreich</title><text x="18" y="580.5" font-size="13" font-weight="700" style="fill:var(--signal)">Schattenreich</text></a>
+<a href="https://www.youtube.com/watch?v=UK86VbGp0Tg" target="_blank" rel="noopener"><title>Tanzaff Productions, Soviet Christmas</title><text x="18" y="599.5" font-size="13" font-weight="700" style="fill:var(--signal)">Soviet Christmas</text></a>
+<circle cx="250" cy="570" r="5" style="fill:var(--magenta)"/>
+<rect x="8" y="645.5" width="242" height="49" rx="3" style="fill:var(--panel);stroke:var(--cyan)" stroke-width="1.5"/>
+<text x="18" y="661.5" font-size="11" style="fill:var(--cyan)">HIP HOUSE</text>
+<a href="https://www.youtube.com/watch?v=N4uM37M_GwQ" target="_blank" rel="noopener"><title>Tanzaff Productions, G Thang (Remix)</title><text x="18" y="680.5" font-size="13" font-weight="700" style="fill:var(--signal)">G Thang (Remix)</text></a>
+<circle cx="250" cy="670" r="5" style="fill:var(--cyan)"/>
+<rect x="8" y="726.5" width="242" height="87" rx="3" style="fill:var(--panel);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="18" y="742.5" font-size="11" style="fill:var(--ink)">FOUND FOOTAGE, COLLAGE</text>
+<a href="https://www.youtube.com/watch?v=idKorq2CoSQ" target="_blank" rel="noopener"><title>Tanzaff Productions, OK Boomer</title><text x="18" y="761.5" font-size="13" font-weight="700" style="fill:var(--signal)">OK Boomer</text></a>
+<a href="https://www.youtube.com/watch?v=bbCEzlBBN20" target="_blank" rel="noopener"><title>Tanzaff Productions, Les Romands</title><text x="18" y="780.5" font-size="13" font-weight="700" style="fill:var(--signal)">Les Romands</text></a>
+<a href="https://www.youtube.com/watch?v=xZuTtsqNwgc" target="_blank" rel="noopener"><title>Tanzaff Productions, Peter B.</title><text x="18" y="799.5" font-size="13" font-weight="700" style="fill:var(--signal)">Peter B.</text></a>
+<circle cx="250" cy="770" r="5" style="fill:var(--ink)"/>
+<a href="https://www.youtube.com/results?search_query=Housey+Doingz+Gobstopper" target="_blank" rel="noopener"><title>Housey Doingz, Gobstopper (London 1997)</title><circle cx="400" cy="80" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="400" y="66" font-size="12" text-anchor="middle" style="fill:var(--ink)">Gobstopper</text><text x="400" y="102" font-size="11" text-anchor="middle">Housey Doingz · London 1997</text></a>
+<a href="https://www.youtube.com/results?search_query=Mr.+Fingers+Can+You+Feel+It" target="_blank" rel="noopener"><title>Mr. Fingers, Can You Feel It (Chicago 1986)</title><circle cx="650" cy="45" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="650" y="31" font-size="12" text-anchor="middle" style="fill:var(--ink)">Can You Feel It</text><text x="650" y="67" font-size="11" text-anchor="middle">Mr. Fingers · Chicago 1986</text></a>
+<a href="https://www.youtube.com/results?search_query=Rhythim+Is+Rhythim+Strings+of+Life" target="_blank" rel="noopener"><title>Rhythim Is Rhythim, Strings of Life (Detroit 1987)</title><circle cx="640" cy="150" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="640" y="136" font-size="12" text-anchor="middle" style="fill:var(--ink)">Strings of Life</text><text x="640" y="172" font-size="11" text-anchor="middle">Rhythim Is Rhythim · Detroit 1987</text></a>
+<a href="https://www.youtube.com/results?search_query=Harold+Melvin+The+Love+I+Lost" target="_blank" rel="noopener"><title>Harold Melvin, The Love I Lost (Philadelphia 1973)</title><circle cx="930" cy="45" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="930" y="31" font-size="12" text-anchor="middle" style="fill:var(--ink)">The Love I Lost</text><text x="930" y="67" font-size="11" text-anchor="middle">Harold Melvin · Philadelphia 1973</text></a>
+<a href="https://www.youtube.com/results?search_query=Klein+MBO+Dirty+Talk" target="_blank" rel="noopener"><title>Klein &amp; M.B.O., Dirty Talk (Milan 1982)</title><circle cx="650" cy="235" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="650" y="221" font-size="12" text-anchor="middle" style="fill:var(--ink)">Dirty Talk</text><text x="650" y="257" font-size="11" text-anchor="middle">Klein &amp; M.B.O. · Milan 1982</text></a>
+<a href="https://www.youtube.com/results?search_query=Automat+Automat" target="_blank" rel="noopener"><title>Automat, Automat (Milan 1978)</title><circle cx="880" cy="195" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="880" y="181" font-size="12" text-anchor="middle" style="fill:var(--ink)">Automat</text><text x="880" y="217" font-size="11" text-anchor="middle">Automat · Milan 1978</text></a>
+<a href="https://www.youtube.com/results?search_query=Donna+Summer+I+Feel+Love" target="_blank" rel="noopener"><title>Donna Summer, I Feel Love (Munich 1977)</title><circle cx="930" cy="535" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="930" y="521" font-size="12" text-anchor="middle" style="fill:var(--ink)">I Feel Love</text><text x="930" y="557" font-size="11" text-anchor="middle">Donna Summer · Munich 1977</text></a>
+<a href="https://www.youtube.com/results?search_query=Basic+Channel+Phylyps+Trak" target="_blank" rel="noopener"><title>Basic Channel, Phylyps Trak (Berlin 1993)</title><circle cx="420" cy="320" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="420" y="306" font-size="12" text-anchor="middle" style="fill:var(--ink)">Phylyps Trak</text><text x="420" y="342" font-size="11" text-anchor="middle">Basic Channel · Berlin 1993</text></a>
+<a href="https://www.youtube.com/results?search_query=Augustus+Pablo+King+Tubby+Meets+Rockers+Uptown" target="_blank" rel="noopener"><title>Augustus Pablo, King Tubby Meets Rockers Uptown (Kingston 1976)</title><circle cx="920" cy="355" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="920" y="341" font-size="12" text-anchor="middle" style="fill:var(--ink)">King Tubby Meets Rockers Uptown</text><text x="920" y="377" font-size="11" text-anchor="middle">Augustus Pablo · Kingston 1976</text></a>
+<a href="https://www.youtube.com/results?search_query=Kraftwerk+Trans-Europe+Express" target="_blank" rel="noopener"><title>Kraftwerk, Trans-Europe Express (Düsseldorf 1977)</title><circle cx="930" cy="285" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="930" y="271" font-size="12" text-anchor="middle" style="fill:var(--ink)">Trans-Europe Express</text><text x="930" y="307" font-size="11" text-anchor="middle">Kraftwerk · Düsseldorf 1977</text></a>
+<a href="https://www.youtube.com/results?search_query=Front+242+Headhunter" target="_blank" rel="noopener"><title>Front 242, Headhunter (Brussels 1988)</title><circle cx="430" cy="570" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="430" y="556" font-size="12" text-anchor="middle" style="fill:var(--ink)">Headhunter</text><text x="430" y="592" font-size="11" text-anchor="middle">Front 242 · Brussels 1988</text></a>
+<a href="https://www.youtube.com/results?search_query=DAF+Der+Mussolini" target="_blank" rel="noopener"><title>DAF, Der Mussolini (Düsseldorf 1981)</title><circle cx="680" cy="570" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="680" y="556" font-size="12" text-anchor="middle" style="fill:var(--ink)">Der Mussolini</text><text x="680" y="592" font-size="11" text-anchor="middle">DAF · Düsseldorf 1981</text></a>
+<a href="https://www.youtube.com/results?search_query=Tyree+Turn+Up+the+Bass" target="_blank" rel="noopener"><title>Tyree, Turn Up the Bass (Chicago 1988)</title><circle cx="420" cy="655" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="420" y="641" font-size="12" text-anchor="middle" style="fill:var(--ink)">Turn Up the Bass</text><text x="420" y="677" font-size="11" text-anchor="middle">Tyree · Chicago 1988</text></a>
+<a href="https://www.youtube.com/results?search_query=Dr.+Dre+Nuthin+but+a+G+Thang" target="_blank" rel="noopener"><title>Dr. Dre, Nuthin&#x27; but a G Thang (Los Angeles 1992)</title><circle cx="430" cy="715" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="430" y="701" font-size="12" text-anchor="middle" style="fill:var(--ink)">Nuthin&#x27; but a G Thang</text><text x="430" y="737" font-size="11" text-anchor="middle">Dr. Dre · Los Angeles 1992</text></a>
+<a href="https://www.youtube.com/results?search_query=Afrika+Bambaataa+Planet+Rock" target="_blank" rel="noopener"><title>Afrika Bambaataa, Planet Rock (New York 1982)</title><circle cx="700" cy="680" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="700" y="666" font-size="12" text-anchor="middle" style="fill:var(--ink)">Planet Rock</text><text x="700" y="702" font-size="11" text-anchor="middle">Afrika Bambaataa · New York 1982</text></a>
+<a href="https://www.youtube.com/results?search_query=Brian+Eno+David+Byrne+My+Life+in+the+Bush+of+Ghosts" target="_blank" rel="noopener"><title>Eno &amp; Byrne, My Life in the Bush of Ghosts (New York 1981)</title><circle cx="640" cy="765" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="640" y="751" font-size="12" text-anchor="middle" style="fill:var(--ink)">My Life in the Bush of Ghosts</text><text x="640" y="787" font-size="11" text-anchor="middle">Eno &amp; Byrne · New York 1981</text></a>
+<a href="https://www.youtube.com/results?search_query=Tangerine+Dream+Rubycon+Part+One" target="_blank" rel="noopener"><title>Tangerine Dream, Rubycon (Berlin 1975)</title><circle cx="930" cy="445" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="930" y="431" font-size="12" text-anchor="middle" style="fill:var(--ink)">Rubycon</text><text x="930" y="467" font-size="11" text-anchor="middle">Tangerine Dream · Berlin 1975</text></a>
+<a href="https://www.youtube.com/results?search_query=Yello+Bostich" target="_blank" rel="noopener"><title>Yello, Bostich (Zurich 1980)</title><circle cx="930" cy="815" r="6.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="2.5"/><text x="930" y="801" font-size="12" text-anchor="middle" style="fill:var(--ink)">Bostich</text><text x="930" y="837" font-size="11" text-anchor="middle">Yello · Zurich 1980</text></a>
+</svg>
           </div>
           <p class="tc scroll-hint">Scrolls sideways</p>
-          <p class="muted">Seven strands, one beat. The bottom line is where Tanzaff Productions picks it up, with a pile of hardware and a short attention span.</p>
+          <p class="muted">Grey lines are shared ancestry. The dashed line is a sample source, not an influence. A line with a note is the artist&rsquo;s own account; the rest are reference points. Every name opens on YouTube.</p>
         </div>
       </section>
 
