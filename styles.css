@@ -892,13 +892,13 @@ button:focus-visible {
 
 /* --- Article masthead --- */
 
-/* "A HISTORY IN 4/4" is about 10.3em long against TECHNO's 5.43em, so at 0.4em
-   and 0.218em tracking it spans exactly the width of TECHNO, the same lockup
-   as TANZAFF / PRODUCTIONS */
+/* "A FAMILY HISTORY IN 4/4" is about 14.85em long (23 characters) against
+   TECHNO's 5.43em, so at 0.3em and 0.142em tracking it spans exactly the width
+   of TECHNO, the same lockup as TANZAFF / PRODUCTIONS */
 .wordmark-story span {
-  font-size: 0.4em;
-  letter-spacing: 0.218em;
-  margin-right: -0.218em;
+  font-size: 0.3em;
+  letter-spacing: 0.142em;
+  margin-right: -0.142em;
 }
 
 .lead-wrap {
