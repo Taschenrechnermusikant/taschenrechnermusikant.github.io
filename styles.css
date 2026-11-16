@@ -1265,7 +1265,8 @@ button:focus-visible {
   .history-card .screen { grid-area: thumb; }
   .history-text { display: contents; }
   .history-meta { grid-area: meta; align-self: end; }
-  .history-title { grid-area: title; align-self: start; font-size: 1.15rem; }
+  .history-title { grid-area: title; align-self: start; font-size: 1.1rem; text-wrap: balance; }
+  .history-meta .meta-extra { display: none; }
   .history-note { grid-area: note; margin-top: 0.65rem; }
   .teaser-cta { grid-area: cta; margin-top: 0.5rem; }
   .facts > div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
