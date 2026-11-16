@@ -1288,4 +1288,5 @@ button:focus-visible {
 .photo .credit, .photo-pair .credit { display: block; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.02em; opacity: 0.8; }
 .photo figcaption a, .photo-pair figcaption a { color: inherit; text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 2px; }
 @media (max-width: 560px) { .photo-pair { grid-template-columns: 1fr; } }
-.photo-dark img { filter: grayscale(1) brightness(0.7) contrast(1.15); }
+.photo-flyer { max-width: 22rem; }
+.photo-flyer img { aspect-ratio: auto; object-fit: contain; filter: none; }
