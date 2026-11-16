@@ -29,7 +29,7 @@
 
     <link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="../fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="../styles.css?v=21" />
+    <link rel="stylesheet" href="../styles.css?v=24" />
   </head>
   <body>
     <!-- EBU colour bars at 75%: white, yellow, cyan, green, magenta, red, blue -->
@@ -50,36 +50,88 @@
         <h2 id="contents-heading" class="label">Contents</h2>
         <div class="block-body">
           <ol class="contents">
-            <li><a href="#roots"><span class="tc">01</span><span><span class="contents-title">Roots</span><span class="contents-dek">Before it had a name, and the Detroit origin story</span></span><span class="tc">1970s&ndash;1988</span></a></li>
+            <li><a href="#roots"><span class="tc">01</span><span><span class="contents-title">Roots</span><span class="contents-dek">Disco&rsquo;s pulse, Germany&rsquo;s machines, Italy and Belgium, Detroit</span></span><span class="tc">1970s&ndash;1988</span></a></li>
             <li><a href="#machines"><span class="tc">02</span><span><span class="contents-title">The machines</span><span class="contents-dek">Four boxes from Japan, misused into a new sound</span></span><span class="tc">1972&ndash;1988</span></a></li>
-            <li><a href="#exchange"><span class="tc">03</span><span><span class="contents-title">The exchange</span><span class="contents-dek">London names it, Frankfurt and Paris remix it, Berlin adopts it</span></span><span class="tc">1970s&ndash;today</span></a></li>
-            <li><a href="#since"><span class="tc">04</span><span><span class="contents-title">What came next</span><span class="contents-dek">Techno splits into branches. Some stay underground, some find the money</span></span><span class="tc">1990s&ndash;today</span></a></li>
-            <li><a href="#your-turn"><span class="tc">05</span><span><span class="contents-title">Your turn</span><span class="contents-dek">A listening path, a self-test and the sources</span></span><span class="tc">23 tracks</span></a></li>
+            <li><a href="#exchange"><span class="tc">03</span><span><span class="contents-title">The exchange</span><span class="contents-dek">London names it, Berlin adopts it, the basements keep it</span></span><span class="tc">1970s&ndash;today</span></a></li>
+            <li><a href="#since"><span class="tc">04</span><span><span class="contents-title">What came next</span><span class="contents-dek">The branches, and where Tanzaff sits</span></span><span class="tc">1990s&ndash;today</span></a></li>
+            <li><a href="#your-turn"><span class="tc">05</span><span><span class="contents-title">Your turn</span><span class="contents-dek">A listening path and the sources</span></span><span class="tc">12 tracks</span></a></li>
           </ol>
         </div>
       </section>
 
       <!-- The whole route at a glance, before the chapters -->
-      <section class="block" aria-labelledby="timeline-title">
-        <div class="story-label"><p class="label label-signal">The route</p><p class="tc">1977&ndash;2010</p></div>
+      <section class="block" aria-labelledby="tree-heading">
+        <div class="story-label"><p class="label label-signal">The family tree</p><p class="tc">1970&ndash;today</p></div>
         <div class="story-body">
-          <h3 id="timeline-title" class="story-title">Ten stops on the way</h3>
-          <div class="split">
-            <dl class="facts facts-years">
-              <div><dt>1977</dt><dd>Moroder&rsquo;s &ldquo;I Feel Love&rdquo; runs disco on a sequencer</dd></div>
-              <div><dt>1981</dt><dd>Cybotron&rsquo;s &ldquo;Alleys of Your Mind&rdquo;, Detroit</dd></div>
-              <div><dt>1987</dt><dd>&ldquo;Strings of Life&rdquo; in Detroit, &ldquo;Acid Tracks&rdquo; in Chicago</dd></div>
-              <div><dt>1988</dt><dd>A London compilation gives the music its name</dd></div>
-              <div><dt>1989</dt><dd>First Love Parade, 150 people. The Wall falls</dd></div>
-            </dl>
-            <dl class="facts facts-years">
-              <div><dt>1991</dt><dd>Tresor opens in a forgotten Berlin bank vault</dd></div>
-              <div><dt>1992</dt><dd>About 1,000 people at Zurich&rsquo;s first Street Parade</dd></div>
-              <div><dt>1994</dt><dd>Robert Hood&rsquo;s &ldquo;Minimal Nation&rdquo; strips techno to the bone</dd></div>
-              <div><dt>2004</dt><dd>Berghain opens in a former power station</dd></div>
-              <div><dt>2010</dt><dd>Boiler Room starts streaming DJ sets to the world</dd></div>
-            </dl>
+          <h3 id="tree-heading" class="story-title">Who fed whom</h3>
+          <div class="chart-wrap lineage">
+            <svg viewBox="0 0 1000 492" role="img" aria-labelledby="tree-title tree-desc">
+              <title id="tree-title">Family tree of techno, 1970 to today, in seven strands</title>
+              <desc id="tree-desc">Funk and disco from 1973, German machine music from 1972, EBM and New Beat from 1981, Italo disco from 1982, Detroit and Chicago from 1984, European clubs from 1988, and Tanzaff Productions from 2017 to today. The time axis skips 2000 to 2016.</desc>
+              <line x1="150.0" y1="34" x2="150.0" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
+              <text x="150.0" y="24" font-size="13" text-anchor="middle">1970</text>
+              <line x1="366.7" y1="34" x2="366.7" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
+              <text x="366.7" y="24" font-size="13" text-anchor="middle">1980</text>
+              <line x1="583.3" y1="34" x2="583.3" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
+              <text x="583.3" y="24" font-size="13" text-anchor="middle">1990</text>
+              <line x1="800.0" y1="34" x2="800.0" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
+              <text x="800.0" y="24" font-size="13" text-anchor="middle">2000</text>
+              <line x1="911.5" y1="34" x2="911.5" y2="486" style="stroke: var(--rule)" stroke-width="1"/>
+              <text x="911.5" y="24" font-size="13" text-anchor="middle">2020</text>
+              <line x1="840" y1="34" x2="840" y2="486" style="stroke: var(--muted)" stroke-width="1" stroke-dasharray="3 5"/>
+              <text x="840" y="24" font-size="13" text-anchor="middle">&hellip;</text>
+              <text x="0" y="90" font-size="13" style="fill: var(--muted)" >FUNK &AMP; DISCO</text>
+              <line x1="191.0" y1="86" x2="325.7" y2="86" style="stroke: var(--signal)" stroke-width="3" opacity="0.35"/>
+              <circle cx="215.0" cy="86" r="5" style="fill: var(--signal)"/>
+              <text x="215.0" y="72" font-size="13" text-anchor="middle" style="fill: var(--ink)">The Love I Lost</text>
+              <circle cx="301.7" cy="86" r="5" style="fill: var(--signal)"/>
+              <text x="301.7" y="112" font-size="13" text-anchor="middle" style="fill: var(--ink)">Warehouse, Chicago</text>
+              <text x="0" y="150" font-size="13" style="fill: var(--muted)" >GERMANY</text>
+              <line x1="169.3" y1="146" x2="412.3" y2="146" style="stroke: var(--cyan)" stroke-width="3" opacity="0.35"/>
+              <circle cx="193.3" cy="146" r="5" style="fill: var(--cyan)"/>
+              <text x="193.3" y="132" font-size="13" text-anchor="middle" style="fill: var(--ink)">Hallogallo</text>
+              <circle cx="301.7" cy="146" r="5" style="fill: var(--cyan)"/>
+              <text x="301.7" y="172" font-size="13" text-anchor="middle" style="fill: var(--ink)">Trans-Europe Express</text>
+              <circle cx="388.3" cy="146" r="5" style="fill: var(--cyan)"/>
+              <text x="388.3" y="132" font-size="13" text-anchor="middle" style="fill: var(--ink)">E2-E4</text>
+              <text x="0" y="210" font-size="13" style="fill: var(--muted)" >EBM &AMP; NEW BEAT</text>
+              <line x1="364.3" y1="206" x2="542.3" y2="206" style="stroke: var(--magenta)" stroke-width="3" opacity="0.35"/>
+              <circle cx="388.3" cy="206" r="5" style="fill: var(--magenta)"/>
+              <text x="388.3" y="192" font-size="13" text-anchor="middle" style="fill: var(--ink)">DAF</text>
+              <circle cx="453.3" cy="206" r="5" style="fill: var(--magenta)"/>
+              <text x="453.3" y="232" font-size="13" text-anchor="middle" style="fill: var(--ink)">Front 242</text>
+              <circle cx="518.3" cy="206" r="5" style="fill: var(--magenta)"/>
+              <text x="518.3" y="192" font-size="13" text-anchor="middle" style="fill: var(--ink)">New Beat</text>
+              <text x="0" y="270" font-size="13" style="fill: var(--muted)" >ITALO DISCO</text>
+              <line x1="386.0" y1="266" x2="455.7" y2="266" style="stroke: var(--green)" stroke-width="3" opacity="0.35"/>
+              <circle cx="410.0" cy="266" r="5" style="fill: var(--green)"/>
+              <text x="410.0" y="252" font-size="13" text-anchor="middle" style="fill: var(--ink)">Dirty Talk</text>
+              <circle cx="431.7" cy="266" r="5" style="fill: var(--green)"/>
+              <text x="431.7" y="292" font-size="13" text-anchor="middle" style="fill: var(--ink)">ZYX names it</text>
+              <text x="0" y="330" font-size="13" style="fill: var(--muted)" >DETROIT &AMP; CHICAGO</text>
+              <line x1="429.3" y1="326" x2="542.3" y2="326" style="stroke: var(--red)" stroke-width="3" opacity="0.35"/>
+              <circle cx="453.3" cy="326" r="5" style="fill: var(--red)"/>
+              <text x="453.3" y="312" font-size="13" text-anchor="middle" style="fill: var(--ink)">Techno City</text>
+              <circle cx="518.3" cy="326" r="5" style="fill: var(--red)"/>
+              <text x="518.3" y="352" font-size="13" text-anchor="middle" style="fill: var(--ink)">Acid Tracks / Strings of Life</text>
+              <text x="0" y="390" font-size="13" style="fill: var(--muted)" >EUROPE</text>
+              <line x1="516.0" y1="386" x2="672.3" y2="386" style="stroke: var(--ink)" stroke-width="3" opacity="0.35"/>
+              <circle cx="540.0" cy="386" r="5" style="fill: var(--ink)"/>
+              <text x="540.0" y="372" font-size="13" text-anchor="middle" style="fill: var(--ink)">Techno! comp.</text>
+              <circle cx="605.0" cy="386" r="5" style="fill: var(--ink)"/>
+              <text x="605.0" y="412" font-size="13" text-anchor="middle" style="fill: var(--ink)">Tresor</text>
+              <circle cx="648.3" cy="386" r="5" style="fill: var(--ink)"/>
+              <text x="648.3" y="372" font-size="13" text-anchor="middle" style="fill: var(--ink)">Basic Channel</text>
+              <text x="0" y="450" font-size="13" style="fill: var(--signal)" font-weight="700">TANZAFF</text>
+              <rect x="880.0" y="442" width="94.5" height="8" style="fill: var(--signal)"/>
+              <circle cx="890.5" cy="446" r="6" style="fill: var(--signal)"/>
+              <text x="890.5" y="432" font-size="13" text-anchor="middle" style="fill: var(--signal)">Burning Desire</text>
+              <circle cx="974.5" cy="446" r="6" style="fill: var(--signal)"/>
+              <text x="978.5" y="472" font-size="13" text-anchor="end" style="fill: var(--signal)">Technauto, Slow Hope</text>
+            </svg>
           </div>
+          <p class="tc scroll-hint">Scrolls sideways</p>
+          <p class="muted">Seven strands, one beat. The bottom line is where Tanzaff Productions picks it up.</p>
         </div>
       </section>
 
@@ -90,153 +142,120 @@
         <p class="chapter-num">01</p>
         <div>
           <h2 class="chapter-title">Roots</h2>
-          <p class="chapter-dek">Before it had a name, and the Detroit origin story.</p>
+          <p class="chapter-dek">Disco&rsquo;s pulse, Germany&rsquo;s machines, Italy and Belgium, and Detroit.</p>
         </div>
       </header>
-
-      <section class="block" aria-labelledby="roots-title">
-        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">1970s&ndash;1983</p></div>
-        <div class="story-body">
-          <h3 id="roots-title" class="story-title">Before it had a name</h3>
-          <dl class="facts">
-            <div><dt>D&uuml;sseldorf, 1970s</dt><dd><b>Kraftwerk.</b> Robot pop. Detroit heard it on late-night radio.</dd></div>
-            <div><dt>Berlin, 1970s</dt><dd><b>Tangerine Dream, Klaus Schulze.</b> Kosmische Musik: the sequencer as the engine.</dd></div>
-            <div><dt>Munich, 1977</dt><dd><b>Giorgio Moroder.</b> &ldquo;I Feel Love&rdquo;: disco run by a machine.</dd></div>
-            <div><dt>Tokyo, 1979</dt><dd><b>Yellow Magic Orchestra.</b> &ldquo;Technopolis&rdquo; puts the word in a title.</dd></div>
-            <div><dt>Zurich, 1980</dt><dd><b>Yello.</b> &ldquo;Bostich&rdquo;. America assumed they were rappers.</dd></div>
-            <div><dt>USA, 1970s</dt><dd><b>Parliament-Funkadelic.</b> The groove, the swagger, the spaceships.</dd></div>
-            <div><dt>Chicago, 1980s</dt><dd><b>Frankie Knuckles, Ron Hardy.</b> House, the sibling growing up next door.</dd></div>
-          </dl>
-        </div>
-      </section>
 
       <section class="block" aria-labelledby="disco-title">
         <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">United States, 1970&ndash;1983</p></div>
         <div class="story-body">
-          <h3 id="disco-title" class="story-title">Funk and disco: where the pulse comes from</h3>
+          <h3 id="disco-title" class="story-title">Funk and disco: the pulse</h3>
           <div class="split">
             <div>
-              <p>Techno&rsquo;s machines came from Japan and much of its sound from Germany, but its pulse is American. Funk brought the groove: James Brown, then Parliament-Funkadelic with the swagger and the spaceships.</p>
-              <p>Disco brought the beat. In 1973 Philadelphia drummer Earl Young put a kick on every quarter note, a snare on two and four and hi-hats on top, on a Harold Melvin &amp; the Blue Notes session. Many call it the first disco record. Chicago and Detroit producers later copied the pattern on Roland drum machines.</p>
-              <p>The clubs mattered as much as the records. In New York, David Mancuso&rsquo;s Loft and then the Paradise Garage, with Larry Levan on the decks, drew a mostly gay, Black and Latino crowd. In Chicago, Frankie Knuckles played disco at the Warehouse, and house music took its name from the club.</p>
+              <p>Funk brought the groove, disco the beat. In 1973 Philadelphia drummer Earl Young put a kick on every quarter note, a snare on two and four and hi-hats on top. Many call it the first disco record.</p>
+              <p>The clubs mattered as much: the Loft and the Paradise Garage in New York, the Warehouse in Chicago, where house music got its name. Frankie Knuckles called house &ldquo;disco&rsquo;s revenge&rdquo;.</p>
             </div>
-            <dl class="facts facts-stack">
-              <div><dt>1970 &middot; The Loft, New York</dt><dd>David Mancuso starts his private parties, on an audiophile sound system.</dd></div>
-              <div><dt>1973 &middot; Philadelphia</dt><dd>Earl Young&rsquo;s four-on-the-floor on &ldquo;The Love I Lost&rdquo;. Often named as the first disco record.</dd></div>
-              <div><dt>1977 &middot; The Warehouse, Chicago</dt><dd>Frankie Knuckles arrives from New York and plays disco. House music is named after the club.</dd></div>
-              <div><dt>Late 1970s &middot; Paradise Garage</dt><dd>Modelled on the Loft. Larry Levan&rsquo;s sets give rise to the terms &ldquo;garage&rdquo; and &ldquo;New York house&rdquo;.</dd></div>
-              <div><dt>1983 &middot; The Power Plant</dt><dd>Knuckles leaves the Warehouse and opens his own club.</dd></div>
-            </dl>
+            <div class="chart-wrap grid">
+              <svg viewBox="0 0 560 190" role="img" aria-labelledby="grid-title grid-desc">
+                <title id="grid-title">Earl Young&rsquo;s disco beat as a 16-step pattern</title>
+                <desc id="grid-desc">One bar in sixteen steps: the kick drum on every quarter note, the snare on beats two and four, hi-hats on every second step.</desc>
+                <text x="91" y="18" font-size="12" text-anchor="middle">1</text>
+                <text x="211" y="18" font-size="12" text-anchor="middle">2</text>
+                <text x="331" y="18" font-size="12" text-anchor="middle">3</text>
+                <text x="451" y="18" font-size="12" text-anchor="middle">4</text>
+                <text x="0" y="58" font-size="12" style="fill: var(--signal)">KICK</text>
+                <rect x="78" y="34" width="26" height="32" style="fill: var(--signal)"/>
+                <rect x="108" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="138" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="168" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="198" y="34" width="26" height="32" style="fill: var(--signal)"/>
+                <rect x="228" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="258" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="288" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="318" y="34" width="26" height="32" style="fill: var(--signal)"/>
+                <rect x="348" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="378" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="408" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="438" y="34" width="26" height="32" style="fill: var(--signal)"/>
+                <rect x="468" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="498" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="528" y="34" width="26" height="32" style="fill: var(--panel)"/>
+                <text x="0" y="104" font-size="12" style="fill: var(--cyan)">SNARE</text>
+                <rect x="78" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="108" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="138" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="168" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="198" y="80" width="26" height="32" style="fill: var(--cyan)"/>
+                <rect x="228" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="258" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="288" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="318" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="348" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="378" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="408" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="438" y="80" width="26" height="32" style="fill: var(--cyan)"/>
+                <rect x="468" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="498" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="528" y="80" width="26" height="32" style="fill: var(--panel)"/>
+                <text x="0" y="150" font-size="12" style="fill: var(--muted)">HI-HAT</text>
+                <rect x="78" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="108" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="138" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="168" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="198" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="228" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="258" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="288" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="318" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="348" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="378" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="408" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="438" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="468" y="126" width="26" height="32" style="fill: var(--panel)"/>
+                <rect x="498" y="126" width="26" height="32" style="fill: var(--muted)"/>
+                <rect x="528" y="126" width="26" height="32" style="fill: var(--panel)"/>
+              </svg>
+              <p class="tc">Earl Young&rsquo;s pattern, one bar</p>
+            </div>
           </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>Knuckles called house &ldquo;disco&rsquo;s revenge&rdquo;. Munich and Italy, further down, took the same disco and put synthesizers under it.</dd></div></dl>
         </div>
       </section>
 
-      <section class="block" aria-labelledby="kraut-title">
-        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">Germany, Britain, 1970s</p></div>
+      <section class="block" aria-labelledby="germany-title">
+        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">Germany, 1970&ndash;1984</p></div>
         <div class="story-body">
-          <h3 id="kraut-title" class="story-title">Krautrock and prog: the engine room</h3>
+          <h3 id="germany-title" class="story-title">Germany: the beat that never stops</h3>
           <div class="split">
             <div>
-              <p>Before the machines took over, German bands taught rock to repeat itself. Neu!, Can and Kraftwerk dropped the verse and the chorus and just kept the beat going.</p>
-              <p>The beat has a name: <i>motorik</i>. A steady 4/4 that never lets up, closely tied to Neu!&rsquo;s Klaus Dinger. &ldquo;Hallogallo&rdquo; finds one simple beat and sticks to it for about ten minutes.</p>
-              <p>Meanwhile British prog rock bought the first portable synthesizers. Long tracks, Moog solos, a sequencer if you could afford one.</p>
-              <p><span class="hl">Detroit:</span> Juan Atkins&rsquo; own listening ran from Kraftwerk to Pink Floyd, Emerson, Lake &amp; Palmer, Tangerine Dream and Isao Tomita.</p>
+              <p>Kraftwerk, Neu! and Can taught rock to repeat itself: no verse, no chorus, just a beat that never stops. Neu!&rsquo;s version has a name, <i>motorik</i>. Kraftwerk, from D&uuml;sseldorf, went all-electronic.</p>
+              <p>In Berlin, Ash Ra Tempel&rsquo;s Manuel G&ouml;ttsching recorded <i>E2-E4</i> in 1981, an hour of one slowly building loop. Larry Levan played it at full length at the Paradise Garage.</p>
+              <p><span class="hl">Detroit:</span> Juan Atkins&rsquo; own listening ran from Kraftwerk to Pink Floyd and Tangerine Dream.</p>
             </div>
             <dl class="facts facts-stack">
-              <div><dt>1970 &middot; Can</dt><dd>&ldquo;Mother Sky&rdquo;. One of the purest motorik records, next to &ldquo;Hallogallo&rdquo;.</dd></div>
-              <div><dt>1972 &middot; Neu!</dt><dd>&ldquo;Hallogallo&rdquo;. One beat, about ten minutes, no hurry.</dd></div>
-              <div><dt>1974 &middot; Kraftwerk</dt><dd>&ldquo;Autobahn&rdquo;. A more electronic, more ambient take on the motorik beat.</dd></div>
-              <div><dt>Early 1970s &middot; Pink Floyd, Emerson, Lake &amp; Palmer, Yes</dt><dd>The portable Minimoog and Moog modulars arrive on prog stages and records.</dd></div>
-            </dl>
-          </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>Kraftwerk started out inside the krautrock scene before going all-electronic. Techno kept the loop and dropped the solos.</dd></div></dl>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="dusseldorf-title">
-        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">D&uuml;sseldorf, 1960s&ndash;1980s</p></div>
-        <div class="story-body">
-          <h3 id="dusseldorf-title" class="story-title">D&uuml;sseldorf, the electric city</h3>
-          <div class="split">
-            <div>
-              <p>Berlin was not the only German city teaching machines to play. Kraftwerk, Neu! and DAF all came out of D&uuml;sseldorf, a Rhine city with an art academy, a music school and one very busy old-town club.</p>
-              <p>It started with two students. Florian Schneider and Ralf H&uuml;tter met at the city&rsquo;s Robert Schumann Hochschule in the late 1960s and later built their Kling Klang studio in a courtyard near the main station.</p>
-              <p>The rest followed. Klaus Dinger and Michael Rother left Kraftwerk to form Neu!, and Conny Plank produced both bands. Punk and electro punk found a home at the Ratinger Hof, an old-town club.</p>
-            </div>
-            <dl class="facts facts-stack">
-              <div><dt>Late 1960s &middot; Robert Schumann Hochschule</dt><dd>Schneider and H&uuml;tter meet as students.</dd></div>
-              <div><dt>1970s &middot; Kling Klang</dt><dd>Kraftwerk&rsquo;s studio, in a courtyard near the D&uuml;sseldorf main station.</dd></div>
-              <div><dt>Early 1970s &middot; Neu!</dt><dd>Dinger and Rother leave Kraftwerk and form their own band, with Conny Plank producing.</dd></div>
-              <div><dt>Mid-1970s &middot; La D&uuml;sseldorf</dt><dd>Dinger&rsquo;s next band, named after the city, takes over when Neu! runs out of steam.</dd></div>
-              <div><dt>Altstadt &middot; Ratinger Hof</dt><dd>The scene&rsquo;s social hub. Punk and electro punk, and DAF, who come back in the EBM section below.</dd></div>
-            </dl>
-          </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>Rudi Esch&rsquo;s book <i>Electri_City</i> covers the D&uuml;sseldorf School of Electronic Music from 1970 to 1986. Its author calls the city the capital of electronic music.</dd></div></dl>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="cosmic-title">
-        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">Berlin, 1971&ndash;1984</p></div>
-        <div class="story-body">
-          <h3 id="cosmic-title" class="story-title">Kosmische Musik: from jam to loop</h3>
-          <div class="split">
-            <div>
-              <p>Krautrock&rsquo;s spaced-out wing was called <i>kosmische Musik</i>, cosmic music: long improvised trips on guitar and synthesizer, with nobody in a hurry.</p>
-              <p>Ash Ra Tempel are the founding document. Their 1971 debut, recorded with producer Conny Plank, has Manuel G&ouml;ttsching on guitar, Klaus Schulze on drums and Hartmut Enke on bass. Schulze left after the first tour and went his own way.</p>
-              <p>Ten years later G&ouml;ttsching sat down in his Berlin studio and recorded an hour-long improvisation in one pass, no overdubs. <i>E2-E4</i> is one loop, built up very slowly. In New York, Larry Levan played it at full length at the Paradise Garage, as a closing record. It became a blueprint for the ambient house and techno that followed: a loop that builds for an hour and never needs a chorus.</p>
-            </div>
-            <dl class="facts facts-stack">
-              <div><dt>1971 &middot; Ash Ra Tempel</dt><dd>Debut album on the Ohr label. G&ouml;ttsching, Schulze, Enke.</dd></div>
-              <div><dt>1973 &middot; The split</dt><dd>The band ends. G&ouml;ttsching carries on as Ashra, Schulze goes solo.</dd></div>
-              <div><dt>12 Dec 1981 &middot; E2-E4</dt><dd>G&ouml;ttsching records it in a single afternoon at his Studio Roma in Berlin.</dd></div>
-              <div><dt>1984 &middot; E2-E4</dt><dd>Released. An hour of one slowly building loop.</dd></div>
-              <div><dt>Mid-1980s &middot; Larry Levan</dt><dd>Introduces <i>E2-E4</i> to New York&rsquo;s Paradise Garage soon after its release, and plays it at full length to close his sets.</dd></div>
-              <div><dt>1989 &middot; Sue&ntilde;o Latino</dt><dd>Builds an ambient house hit on the <i>E2-E4</i> loop.</dd></div>
-            </dl>
-          </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>The title is a chess opening, and also the guitar tunings. Wikipedia credits the album with a major influence on electronica, techno especially.</dd></div></dl>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="italo-title">
-        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">Italy, 1979&ndash;1985</p></div>
-        <div class="story-body">
-          <h3 id="italo-title" class="story-title">Italo disco, the missing link</h3>
-          <div class="split">
-            <div>
-              <p>Italian producers swap disco&rsquo;s string section for cheap synths and drum machines, building on Moroder&rsquo;s Munich blueprint.</p>
-              <p><span class="hl">Chicago:</span> Knuckles and Hardy fill their sets with Italian import 12-inches. Early house borrows the beats.</p>
-              <p><span class="hl">Detroit:</span> party kids call it &ldquo;progressive&rdquo;. Juan Atkins plays it at college parties; Derrick May brings the imports home from Chicago.</p>
-            </div>
-            <dl class="facts facts-stack">
-              <div><dt>1982 &middot; Klein &amp; M.B.O.</dt><dd>&ldquo;Dirty Talk&rdquo;. A Milan record whose beat echoes through early Chicago house.</dd></div>
-              <div><dt>1982 &middot; Mito</dt><dd>&ldquo;Droid&rdquo;. An Italo cover of Automat&rsquo;s 1978 original, credited to the same two writers.</dd></div>
-              <div><dt>1983 &middot; Alexander Robotnick</dt><dd>&ldquo;Probl&egrave;mes d&rsquo;amour&rdquo;. A flop in Italy, a cult record in American clubs.</dd></div>
-              <div><dt>1983 &middot; Doctor&rsquo;s Cat</dt><dd>&ldquo;Feel the Drive&rdquo;. One of the imports Derrick May called his edge as a DJ.</dd></div>
+              <div><dt>1971 &middot; Ash Ra Tempel</dt><dd>Debut album. G&ouml;ttsching, Schulze, Enke.</dd></div>
+              <div><dt>1972 &middot; Neu!</dt><dd>&ldquo;Hallogallo&rdquo;. One beat, about ten minutes.</dd></div>
+              <div><dt>1974 &middot; Kraftwerk</dt><dd>&ldquo;Autobahn&rdquo;. An electronic take on motorik.</dd></div>
+              <div><dt>1981 &middot; G&ouml;ttsching</dt><dd><i>E2-E4</i>, recorded in one take.</dd></div>
             </dl>
           </div>
         </div>
       </section>
 
-      <section class="block" aria-labelledby="ebm-title">
-        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">Germany, Belgium, 1981&ndash;1987</p></div>
+      <section class="block" aria-labelledby="italy-title">
+        <div class="story-label"><p class="label label-signal">Prehistory</p><p class="tc">Italy, Belgium, 1979&ndash;1987</p></div>
         <div class="story-body">
-          <h3 id="ebm-title" class="story-title">EBM, the hard edge</h3>
+          <h3 id="italy-title" class="story-title">Italo disco and EBM: soft and hard</h3>
           <div class="split">
             <div>
-              <p>While Italy taught the machines to sing, Germany and Belgium taught them to march: hard sequencer lines, shouted vocals, a beat built for the body.</p>
-              <p>DAF called it <i>K&ouml;rpermusik</i>, body music. Front 242 put &ldquo;electronic body music&rdquo; in the liner notes of <i>No Comment</i> in 1984, and the name stuck.</p>
-              <p><span class="hl">Chicago and Detroit:</span> the records arrived on import. Many house and techno DJs there name &ldquo;Los Ni&ntilde;os del Parque&rdquo; as a key influence.</p>
+              <p class="tc">Italy &middot; soft</p>
+              <p>Italian producers swapped disco&rsquo;s strings for cheap synths and drum machines. The records reached Chicago and Detroit as imports. Derrick May called them his edge as a DJ.</p>
+              <p><span class="tz">Tanzaff</span> Burning Desire, 123 BPM</p>
             </div>
-            <dl class="facts facts-stack">
-              <div><dt>1981 &middot; DAF</dt><dd>&ldquo;Der Mussolini&rdquo;. Two men, one sequencer, no mercy.</dd></div>
-              <div><dt>1981 &middot; Liaisons Dangereuses</dt><dd>&ldquo;Los Ni&ntilde;os del Parque&rdquo;. A step-sequenced underground hit, played on both sides of the Atlantic.</dd></div>
-              <div><dt>1984 &middot; Front 242</dt><dd><i>No Comment</i> gives the genre its name.</dd></div>
-              <div><dt>1986&ndash;87 &middot; Belgium</dt><dd>A DJ plays A Split-Second&rsquo;s EBM single &ldquo;Flesh&rdquo; at 33 instead of 45 rpm, pitched up. Slow, heavy New Beat is born. Which DJ did it first is still disputed.</dd></div>
-            </dl>
+            <div>
+              <p class="tc">Germany, Belgium &middot; hard</p>
+              <p>Hard sequencer lines and shouted vocals. Front 242 put the name &ldquo;electronic body music&rdquo; on a record in 1984. Played slow in Belgium, it became New Beat.</p>
+            </div>
           </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>Frankfurt&rsquo;s Technoclub nights ran on EBM. Belgium&rsquo;s New Beat grew straight out of it, and so did early trance. Both come back in chapter 03.</dd></div></dl>
         </div>
       </section>
 
@@ -246,17 +265,15 @@
           <h3 id="detroit-title" class="story-title">Three friends from Belleville</h3>
           <div class="split">
             <div>
-              <p>Juan Atkins, Derrick May and Kevin Saunderson met as teenagers in Belleville, a small town outside Detroit.</p>
-              <p>Too young for clubs, they learned from the radio. <span class="hl">The Electrifying Mojo</span> played Kraftwerk next to Prince next to Parliament.</p>
-              <p class="muted">Atkins took the word from futurist Alvin Toffler&rsquo;s book <i>The Third Wave</i>, with its &ldquo;techno rebels&rdquo;.</p>
+              <p>Juan Atkins, Derrick May and Kevin Saunderson met as teenagers in Belleville, outside Detroit. Too young for clubs, they learned from the radio: <span class="hl">The Electrifying Mojo</span> played Kraftwerk next to Prince next to Parliament.</p>
+              <p class="muted">Detroit&rsquo;s own clubs largely ignored the early records. The big audience came from Europe.</p>
             </div>
             <dl class="facts facts-stack">
-              <div><dt>Juan Atkins &middot; the Originator</dt><dd>Cybotron, &ldquo;Alleys of Your Mind&rdquo; (1981). Model 500, &ldquo;No UFO&rsquo;s&rdquo; (1985).</dd></div>
+              <div><dt>Juan Atkins &middot; the Originator</dt><dd>Cybotron, &ldquo;Techno City&rdquo; (1984). Model 500, &ldquo;No UFO&rsquo;s&rdquo; (1985).</dd></div>
               <div><dt>Derrick May &middot; the Innovator</dt><dd>Rhythim Is Rhythim, &ldquo;Strings of Life&rdquo; (1987).</dd></div>
-              <div><dt>Kevin Saunderson &middot; the Elevator</dt><dd>Inner City, &ldquo;Big Fun&rdquo; (1988). Techno in the UK pop charts.</dd></div>
+              <div><dt>Kevin Saunderson &middot; the Elevator</dt><dd>Inner City, &ldquo;Big Fun&rdquo; (1988).</dd></div>
             </dl>
           </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>Detroit&rsquo;s own clubs largely ignored the early records. The big audience came from Europe.</dd></div></dl>
         </div>
       </section>
 
@@ -293,20 +310,6 @@
             </table>
           </div>
           <p>The Roland boxes sold poorly and turned up cheap second-hand, exactly where teenagers in Detroit and Chicago could afford them. No band, no studio budget: <span class="hl">the machine is the band.</span></p>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="osaka-title">
-        <div class="story-label"><p class="label label-signal">The machines</p><p class="tc">Made in Osaka</p></div>
-        <div class="story-body">
-          <h3 id="osaka-title" class="story-title">The engineers behind the boxes</h3>
-          <div class="people">
-            <div><p class="label">Roland, founder</p><h4>Ikutaro Kakehashi</h4><p class="tc">1930&ndash;2017</p><p>Founded Roland in Osaka in 1972. Reportedly bought faulty transistors on purpose for the 808&rsquo;s sizzle.</p></div>
-            <div><p class="label">Roland, design lead</p><h4>Tadao Kikumoto</h4><p class="tc">303 &middot; 808 &middot; 909</p><p>Led the team behind all three. His 909 was the first drum machine with MIDI.</p></div>
-            <div><p class="label">Matsushita / Technics</p><h4>Shuichi Obata</h4><p class="tc">SP-10 &middot; SL-1200</p><p>Invented the direct-drive turntable. Its torque made beatmatching and scratching possible.</p></div>
-          </div>
-          <dl class="facts worth"><div><dt>MIDI, 1983</dt><dd>Kakehashi and Dave Smith of Sequential Circuits unveil the common language that lets drum machines, synths and computers play in sync. Both received a Technical Grammy in 2013. It is still the industry standard.</dd></div></dl>
-          <p class="muted">Also from Japan: Yamaha&rsquo;s DX7 (1983), Korg, and Akai&rsquo;s MPC samplers (1988).</p>
         </div>
       </section>
 
@@ -352,27 +355,46 @@
       </section>
 
       <section class="block" aria-labelledby="tempo-title">
-        <div class="story-label"><p class="label label-signal">Listen</p><p class="tc">34 seconds &middot; sound on</p></div>
+        <div class="story-label"><p class="label label-signal">Tempo</p><p class="tc">Beats per minute</p></div>
         <div class="story-body">
           <h3 id="tempo-title" class="story-title">Same beat, different speeds</h3>
-          <p>Every scene in the chapters that follow picked its own speed. Here is the ladder.</p>
-          <div class="split split-clip">
-            <figure class="clip">
-              <video controls playsinline preload="none" poster="media/tempo.png" width="960" height="720" aria-label="Tempo ladder: the same kick and hi-hat at 122, 130, 135, 150 and 180 BPM, labelled Chicago house, Detroit techno, Berlin techno, hard techno and gabber">
-                <source src="media/tempo.mp4" type="video/mp4" />
-              </video>
-              <figcaption class="tc">Same kick, same hat. Only the speed changes.</figcaption>
-            </figure>
-            <div>
-              <p class="tc">Typical tempos, beats per minute</p>
-              <dl class="facts facts-stack">
-                <div><dt>118&ndash;125</dt><dd>Chicago house</dd></div>
-                <div><dt>125&ndash;135</dt><dd>Detroit and Berlin techno</dd></div>
-                <div><dt>140&ndash;160</dt><dd>Hard techno, schranz</dd></div>
-                <div><dt>160&ndash;200+</dt><dd>Gabber, hardcore</dd></div>
-              </dl>
-            </div>
+          <div class="chart-wrap tempo">
+          <svg viewBox="0 0 1000 210" role="img" aria-labelledby="bpm-title bpm-desc">
+            <title id="bpm-title">Typical tempos by style, 100 to 200 beats per minute, with two Tanzaff tracks marked</title>
+            <desc id="bpm-desc">New Beat 100 to 115, house 118 to 125, techno 125 to 135, hard techno 140 to 160, gabber 160 to 200. Technauto runs at 113 BPM and Burning Desire at 123 BPM.</desc>
+            <line x1="57.7" y1="70" x2="57.7" y2="120" style="stroke: var(--rule)" stroke-width="1"/>
+            <text x="57.7" y="140" font-size="13" text-anchor="middle">100</text>
+            <line x1="234.6" y1="70" x2="234.6" y2="120" style="stroke: var(--rule)" stroke-width="1"/>
+            <text x="234.6" y="140" font-size="13" text-anchor="middle">120</text>
+            <line x1="411.5" y1="70" x2="411.5" y2="120" style="stroke: var(--rule)" stroke-width="1"/>
+            <text x="411.5" y="140" font-size="13" text-anchor="middle">140</text>
+            <line x1="588.5" y1="70" x2="588.5" y2="120" style="stroke: var(--rule)" stroke-width="1"/>
+            <text x="588.5" y="140" font-size="13" text-anchor="middle">160</text>
+            <line x1="765.4" y1="70" x2="765.4" y2="120" style="stroke: var(--rule)" stroke-width="1"/>
+            <text x="765.4" y="140" font-size="13" text-anchor="middle">180</text>
+            <line x1="942.3" y1="70" x2="942.3" y2="120" style="stroke: var(--rule)" stroke-width="1"/>
+            <text x="942.3" y="140" font-size="13" text-anchor="middle">200</text>
+            <rect x="57.7" y="82" width="132.7" height="26" style="fill: var(--magenta)" opacity="0.85"/>
+            <text x="57.7" y="74" font-size="13" style="fill: var(--ink)">New Beat</text>
+            <rect x="216.9" y="82" width="61.9" height="26" style="fill: var(--signal)" opacity="0.85"/>
+            <text x="216.9" y="74" font-size="13" style="fill: var(--ink)">House</text>
+            <rect x="278.8" y="82" width="88.5" height="26" style="fill: var(--cyan)" opacity="0.85"/>
+            <text x="278.8" y="74" font-size="13" style="fill: var(--ink)">Techno</text>
+            <rect x="411.5" y="82" width="176.9" height="26" style="fill: var(--red)" opacity="0.85"/>
+            <text x="411.5" y="74" font-size="13" style="fill: var(--ink)">Hard techno</text>
+            <rect x="588.5" y="82" width="353.8" height="26" style="fill: var(--ink)" opacity="0.85"/>
+            <text x="588.5" y="74" font-size="13" style="fill: var(--ink)">Gabber</text>
+            <line x1="172.7" y1="40" x2="172.7" y2="170" style="stroke: var(--signal)" stroke-width="3"/>
+            <circle cx="172.7" cy="40" r="6" style="fill: var(--signal)"/>
+            <text x="168.7" y="190" font-size="14" font-weight="700" text-anchor="end" style="fill: var(--signal)">TECHNAUTO 113</text>
+            <line x1="261.2" y1="40" x2="261.2" y2="170" style="stroke: var(--signal)" stroke-width="3"/>
+            <circle cx="261.2" cy="40" r="6" style="fill: var(--signal)"/>
+            <text x="265.2" y="190" font-size="14" font-weight="700" text-anchor="start" style="fill: var(--signal)">BURNING DESIRE 123</text>
+            <text x="942.3" y="162" font-size="13" text-anchor="end">BPM</text>
+          </svg>
           </div>
+          <p class="tc scroll-hint">Scrolls sideways</p>
+          <p class="muted">Every scene picked its own speed. Typical ranges, not rules.</p>
         </div>
       </section>
 
@@ -383,40 +405,9 @@
         <p class="chapter-num">03</p>
         <div>
           <h2 class="chapter-title">The exchange</h2>
-          <p class="chapter-dek">London names it, Frankfurt and Paris remix it, Berlin gives it a home. The parades go big, the basements stay small.</p>
+          <p class="chapter-dek">London names it, Berlin gives it a home. The basements stay small.</p>
         </div>
       </header>
-
-      <section class="block" aria-labelledby="pingpong-title">
-        <div class="story-label"><p class="label label-signal">The exchange</p><p class="tc">1970s&ndash;1991</p></div>
-        <div class="story-body">
-          <h3 id="pingpong-title" class="story-title">Transatlantic ping-pong</h3>
-          <div class="exchange">
-            <p class="label ex-head">America</p><span class="ex-head"></span><p class="label ex-head to-right">Europe and Japan</p>
-
-            <p>Funk, soul and disco: Parliament, James Brown, Donna Summer</p>
-            <div class="ex-mid east"><span class="tc">1970s</span><svg viewBox="0 0 56 16" role="img" aria-label="Eastward"><path d="M0 6h44V0l12 8-12 8v-6H0z" /></svg></div>
-            <p class="to-right">Moroder in Munich builds &ldquo;I Feel Love&rdquo; around Donna Summer&rsquo;s voice</p>
-
-            <p>Mojo plays it on Detroit radio. Juan Atkins hears &ldquo;Robots&rdquo; and freezes</p>
-            <div class="ex-mid west"><span class="tc">1977&ndash;81</span><svg viewBox="0 0 56 16" role="img" aria-label="Westward"><path d="M56 6H12V0L0 8l12 8v-6h44z" /></svg></div>
-            <p class="to-right">Machine music: Kraftwerk, Yellow Magic Orchestra, Italo disco, Yello</p>
-
-            <p>Afrika Bambaataa turns them into &ldquo;Planet Rock&rdquo;. Electro is born</p>
-            <div class="ex-mid west"><span class="tc">1982</span><svg viewBox="0 0 56 16" role="img" aria-label="Westward"><path d="M56 6H12V0L0 8l12 8v-6h44z" /></svg></div>
-            <p class="to-right">Kraftwerk&rsquo;s &ldquo;Trans-Europe Express&rdquo; melody and &ldquo;Numbers&rdquo; beat</p>
-
-            <p>Detroit techno and Chicago house records, ignored at home</p>
-            <div class="ex-mid east"><span class="tc">1985&ndash;88</span><svg viewBox="0 0 56 16" role="img" aria-label="Eastward"><path d="M0 6h44V0l12 8-12 8v-6H0z" /></svg></div>
-            <p class="to-right">UK raves, Belgian labels and German clubs adopt them first</p>
-
-            <p>Detroit artists get a second home, an audience and an income</p>
-            <div class="ex-mid west"><span class="tc">1991</span><svg viewBox="0 0 56 16" role="img" aria-label="Westward"><path d="M56 6H12V0L0 8l12 8v-6h44z" /></svg></div>
-            <p class="to-right">Berlin&rsquo;s Tresor releases Underground Resistance, Jeff Mills, Robert Hood</p>
-          </div>
-          <p class="muted">No side invented techno alone. Yellow arrows go east, cyan arrows go west, and all of it ran on machines from Osaka.</p>
-        </div>
-      </section>
 
       <section class="block" aria-labelledby="naming-title">
         <div class="story-label"><p class="label label-signal">London</p><p class="tc">1988</p></div>
@@ -430,77 +421,20 @@
             <p>UK soul DJ Neil Rushton compiled it with Derrick May for Virgin&rsquo;s 10 Records. Juan Atkins&rsquo; track &ldquo;Techno Music&rdquo; tipped the title.</p>
             <p class="muted">Until then, British fans filed Detroit under Chicago house. From here on it was its own thing.</p>
           </div>
-          <dl class="facts worth"><div><dt>Worth knowing</dt><dd>The word itself goes back to Toffler&rsquo;s &ldquo;techno rebels&rdquo; and, earlier still, to Yellow Magic Orchestra&rsquo;s &ldquo;Technopolis&rdquo; (1979).</dd></div></dl>
         </div>
       </section>
 
       <section class="block" aria-labelledby="europe-title">
-        <div class="story-label"><p class="label label-signal">Europe</p><p class="tc">1988&ndash;1992</p></div>
+        <div class="story-label"><p class="label label-signal">Europe</p><p class="tc">1988&ndash;1998</p></div>
         <div class="story-body">
           <h3 id="europe-title" class="story-title">Every country gets its own accent</h3>
           <dl class="facts">
             <div><dt>UK, 1988</dt><dd><b>Rave Britain.</b> Acid house in fields and warehouses. A 1994 law targeted music with &ldquo;a succession of repetitive beats&rdquo;.</dd></div>
-            <div><dt>Ghent, 1980s</dt><dd><b>R&amp;S and New Beat.</b> EBM slowed down, then techno sped up. Darker and heavier than most. Belgium punched far above its weight.</dd></div>
-            <div><dt>Rotterdam, 1992</dt><dd><b>Gabber.</b> Dutch for &ldquo;mate&rdquo;. A 909 kick pushed through a distortion pedal at 160 to 200 BPM, tracksuits optional.</dd></div>
-            <div><dt>Zurich, 1992</dt><dd><b>Street Parade.</b> A maths student sees the Love Parade on TV and registers a &ldquo;demonstration for love, peace, freedom and tolerance&rdquo;. About 1,000 people turn up.</dd></div>
+            <div><dt>Ghent, 1980s</dt><dd><b>New Beat.</b> EBM slowed down. Dark, heavy, Belgian.</dd></div>
+            <div><dt>Frankfurt, 1988</dt><dd><b>Omen.</b> Sven V&auml;th&rsquo;s club. Trance, and later schranz.</dd></div>
+            <div><dt>Paris, 1990s</dt><dd><b>French touch.</b> House through a filter. Motorbass, Daft Punk.</dd></div>
+            <div><dt>Rotterdam, 1992</dt><dd><b>Gabber.</b> 160 to 200 BPM, a distorted 909 kick.</dd></div>
           </dl>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="frankfurt-title">
-        <div class="story-label"><p class="label label-signal">Frankfurt</p><p class="tc">1980s&ndash;today</p></div>
-        <div class="story-body">
-          <h3 id="frankfurt-title" class="story-title">The other techno city</h3>
-          <p>Frankfurt had its own machine music before the Detroit records landed, and it still argues about who used the word first.</p>
-          <dl class="facts">
-            <div><dt>Early 1980s</dt><dd><b>Dorian Gray.</b> A club in the airport. Sven V&auml;th starts DJing there in 1982; Talla 2XLC brings in his Technoclub nights and electronic body music.</dd></div>
-            <div><dt>Mid-1980s</dt><dd><b>Sound of Frankfurt.</b> Talla 2XLC and Ralf Henrich&rsquo;s Moskwa TV make cold, sequenced dance music. The Technoclub had the word on the door before London put it on a record sleeve.</dd></div>
-            <div><dt>1988&ndash;1998</dt><dd><b>Omen.</b> V&auml;th opens it with Michael M&uuml;nzing and Matthias Martinsohn. For ten years the centre of the scene, with a hypnotic, trance-tinged sound.</dd></div>
-            <div><dt>Early 1990s</dt><dd><b>Eye Q and Harthouse.</b> V&auml;th&rsquo;s labels, home of early trance. More on that just below.</dd></div>
-            <div><dt>Late 1990s</dt><dd><b>Schranz.</b> Chris Liebing&rsquo;s hard, percussive, distorted techno gets its name. It stuck after his &ldquo;Birthday Schranz&rdquo; party at Omen in 1997.</dd></div>
-            <div><dt>Late 1990s</dt><dd><b>Robert Johnson.</b> Next door in Offenbach, DJ Ata&rsquo;s small white loft becomes one of the most important house clubs in Europe.</dd></div>
-            <div><dt>2022</dt><dd><b>MOMEM.</b> Frankfurt opens a museum of modern electronic music, started by Talla 2XLC. First exhibition: Sven V&auml;th.</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="trance-title">
-        <div class="story-label"><p class="label label-signal">Trance</p><p class="tc">Frankfurt, Berlin, 1990&ndash;1994</p></div>
-        <div class="story-body">
-          <h3 id="trance-title" class="story-title">Trance, before the arms went up</h3>
-          <div class="split">
-            <div>
-              <p>Take EBM, drop the shouting, keep the arpeggio running and never resolve it. That is trance as it started around 1990: one track rolling on all night, no verse, no chorus, no big moment.</p>
-              <p>Frankfurt and Berlin built it. V&auml;th&rsquo;s Eye Q was the melodic side, its sister label Harthouse the harder, acid side. In Berlin, Mark Reeder&rsquo;s MFS did the same.</p>
-              <p class="muted">By the late 1990s the superclubs had turned it into anthems, breakdowns and raised arms. Pretty much the opposite of the idea.</p>
-            </div>
-            <dl class="facts facts-stack">
-              <div><dt>1990 &middot; The Age of Love</dt><dd>&ldquo;The Age of Love&rdquo;. Often named the first true trance record.</dd></div>
-              <div><dt>Early 1990s &middot; Eye Q, Harthouse</dt><dd>V&auml;th, Heinz Roth and Matthias Hoffmann&rsquo;s Frankfurt labels set the sound.</dd></div>
-              <div><dt>1992 &middot; Hardfloor</dt><dd>&ldquo;Acperience 1&rdquo;. The 303 goes trance.</dd></div>
-              <div><dt>Berlin &middot; MFS</dt><dd>Mark Reeder&rsquo;s label, later home of Paul van Dyk.</dd></div>
-            </dl>
-          </div>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="paris-title">
-        <div class="story-label"><p class="label label-signal">Paris</p><p class="tc">1987&ndash;1997</p></div>
-        <div class="story-body">
-          <h3 id="paris-title" class="story-title">French touch: house through a filter</h3>
-          <div class="split">
-            <div>
-              <p>France took house rather than techno and made it its own: old disco records chopped into loops, pushed through a filter that opens and closes, compressed until the whole track breathes.</p>
-              <p>It began with Paris DJs bringing Chicago and Detroit records home. By 1997 it was selling all over the world.</p>
-              <p class="muted">Not techno, but the same machines, the same four on the floor and the same habit of borrowing.</p>
-            </div>
-            <dl class="facts facts-stack">
-              <div><dt>1987 &middot; The Palace</dt><dd>&ldquo;French Touch&rdquo; parties in Paris, with a young Laurent Garnier among the DJs. Usually named as the origin of the term.</dd></div>
-              <div><dt>1992 &middot; Rex Club</dt><dd>Garnier&rsquo;s Wake Up nights bring the Detroit and Chicago pioneers to Paris.</dd></div>
-              <div><dt>1996 &middot; Motorbass, &Eacute;tienne de Cr&eacute;cy</dt><dd><i>Pansoul</i> and <i>Super Discount</i>: the blueprints.</dd></div>
-              <div><dt>1997 &middot; Daft Punk</dt><dd><i>Homework</i>, recorded at home in Paris, hence the title. French house goes worldwide.</dd></div>
-            </dl>
-          </div>
         </div>
       </section>
 
@@ -521,72 +455,6 @@
             </dl>
           </div>
           <dl class="facts worth"><div><dt>Worth knowing</dt><dd>Tresor&rsquo;s safe-deposit bars moved with the club to the Kraftwerk power station in 2007. In 2024 Berlin techno joined Germany&rsquo;s national inventory of intangible cultural heritage.</dd></div></dl>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="parades-title-h">
-        <div class="story-label"><p class="label label-signal">By the numbers</p><p class="tc">1989&ndash;2003</p></div>
-        <div class="story-body">
-          <h3 id="parades-title-h" class="story-title">From 150 people to 1.5 million</h3>
-          <p class="legend"><span><i class="swatch" style="background: var(--signal)"></i>Love Parade, Berlin</span><span><i class="swatch" style="background: var(--magenta)"></i>Street Parade, Zurich</span></p>
-          <div class="chart-wrap">
-            <svg viewBox="0 0 1300 580" role="img" aria-labelledby="parades-title parades-desc">
-              <title id="parades-title">Attendance, Love Parade Berlin and Street Parade Zurich, 1989 to 2003</title>
-              <desc id="parades-desc">The Berlin Love Parade grows from about 150 people in 1989 to a peak of 1.5 million in 1999. The Zurich Street Parade grows from about 1,000 in 1992 to 1 million in 2001.</desc>
-              <line x1="0" y1="366.9" x2="1300" y2="366.9" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="0" y="356.9" font-size="22">0.5M</text>
-              <line x1="0" y1="213.8" x2="1300" y2="213.8" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="0" y="203.8" font-size="22">1.0M</text>
-              <line x1="0" y1="60.6" x2="1300" y2="60.6" style="stroke: var(--rule)" stroke-width="1"/>
-              <text x="0" y="50.6" font-size="22">1.5M</text>
-              <line x1="0" y1="520" x2="1300" y2="520" style="stroke: var(--muted)" stroke-width="1"/>
-              <rect x="14.0" y="518.0" width="28" height="2.0" style="fill: var(--signal)"/>
-              <rect x="100.7" y="518.0" width="28" height="2.0" style="fill: var(--signal)"/>
-              <rect x="187.3" y="518.0" width="28" height="2.0" style="fill: var(--signal)"/>
-              <rect x="274.0" y="515.3" width="28" height="4.7" style="fill: var(--signal)"/>
-              <rect x="304.0" y="518.0" width="28" height="2.0" style="fill: var(--magenta)"/>
-              <rect x="360.7" y="510.4" width="28" height="9.6" style="fill: var(--signal)"/>
-              <rect x="390.7" y="516.9" width="28" height="3.1" style="fill: var(--magenta)"/>
-              <rect x="447.3" y="486.3" width="28" height="33.7" style="fill: var(--signal)"/>
-              <rect x="477.3" y="513.9" width="28" height="6.1" style="fill: var(--magenta)"/>
-              <rect x="534.0" y="434.2" width="28" height="85.8" style="fill: var(--signal)"/>
-              <rect x="564.0" y="474.1" width="28" height="45.9" style="fill: var(--magenta)"/>
-              <rect x="620.7" y="290.3" width="28" height="229.7" style="fill: var(--signal)"/>
-              <rect x="650.7" y="412.8" width="28" height="107.2" style="fill: var(--magenta)"/>
-              <rect x="707.3" y="213.8" width="28" height="306.2" style="fill: var(--signal)"/>
-              <rect x="737.3" y="374.5" width="28" height="145.5" style="fill: var(--magenta)"/>
-              <rect x="794.0" y="275.0" width="28" height="245.0" style="fill: var(--signal)"/>
-              <rect x="824.0" y="382.2" width="28" height="137.8" style="fill: var(--magenta)"/>
-              <rect x="880.7" y="60.6" width="28" height="459.4" style="fill: var(--signal)"/>
-              <rect x="910.7" y="351.6" width="28" height="168.4" style="fill: var(--magenta)"/>
-              <rect x="967.3" y="121.9" width="28" height="398.1" style="fill: var(--signal)"/>
-              <rect x="997.3" y="290.3" width="28" height="229.7" style="fill: var(--magenta)"/>
-              <rect x="1054.0" y="275.0" width="28" height="245.0" style="fill: var(--signal)"/>
-              <rect x="1084.0" y="213.8" width="28" height="306.2" style="fill: var(--magenta)"/>
-              <rect x="1140.7" y="290.3" width="28" height="229.7" style="fill: var(--signal)"/>
-              <rect x="1170.7" y="320.9" width="28" height="199.1" style="fill: var(--magenta)"/>
-              <rect x="1227.3" y="290.3" width="28" height="229.7" style="fill: var(--signal)"/>
-              <text x="42.0" y="560" font-size="22" text-anchor="middle">1989</text>
-              <text x="128.7" y="560" font-size="22" text-anchor="middle">90</text>
-              <text x="215.3" y="560" font-size="22" text-anchor="middle">91</text>
-              <text x="302.0" y="560" font-size="22" text-anchor="middle">92</text>
-              <text x="388.7" y="560" font-size="22" text-anchor="middle">93</text>
-              <text x="475.4" y="560" font-size="22" text-anchor="middle">94</text>
-              <text x="562.0" y="560" font-size="22" text-anchor="middle">95</text>
-              <text x="648.7" y="560" font-size="22" text-anchor="middle">96</text>
-              <text x="735.4" y="560" font-size="22" text-anchor="middle">97</text>
-              <text x="822.0" y="560" font-size="22" text-anchor="middle">98</text>
-              <text x="908.7" y="560" font-size="22" text-anchor="middle">99</text>
-              <text x="995.4" y="560" font-size="22" text-anchor="middle">00</text>
-              <text x="1082.0" y="560" font-size="22" text-anchor="middle">01</text>
-              <text x="1168.7" y="560" font-size="22" text-anchor="middle">02</text>
-              <text x="1255.4" y="560" font-size="22" text-anchor="middle">2003</text>
-              <text x="866" y="48" font-size="22" text-anchor="end" style="fill: var(--signal)">Berlin, 1999</text>
-              <text x="1084" y="200" font-size="22" style="fill: var(--magenta)">Zurich, 2001</text>
-            </svg>
-          </div>
-          <p>1989: about 150 friends behind one truck, registered as a demonstration. Motto: &ldquo;Peace, Joy, Pancakes&rdquo;.</p>
-          <p class="tc">Organisers&rsquo; estimates. Police counts were often lower.</p>
         </div>
       </section>
 
@@ -611,7 +479,7 @@
         <p class="chapter-num">04</p>
         <div>
           <h2 class="chapter-title">What came next</h2>
-          <p class="chapter-dek">Techno splits into branches. Some stay underground, some find the money.</p>
+          <p class="chapter-dek">The branches, and where Tanzaff sits.</p>
         </div>
       </header>
 
@@ -620,40 +488,51 @@
         <div class="story-body">
           <h3 id="branches-title" class="story-title">What grew out of it</h3>
           <dl class="facts">
-            <div><dt>Early 1990s</dt><dd><b>Minimal</b> <span class="muted">&middot; Detroit, Windsor, then Cologne, Berlin.</span> Robert Hood and Richie Hawtin strip techno to the bone. In the 2000s Kompakt and Berlin turn the idea into clicks, space and laptops.</dd></div>
-            <div><dt>Early 1990s</dt><dd><b>Tech house</b> <span class="muted">&middot; London.</span> Techno&rsquo;s toughness with house&rsquo;s swing, worked out on the dance floor of the Wiggle parties by Terry Francis, Nathan Coles and Eddie Richards. Later at home at The End and fabric.</dd></div>
-            <div><dt>Mid-1990s</dt><dd><b>Dub techno</b> <span class="muted">&middot; Berlin.</span> Minimal techno run through Jamaican dub. Moritz von Oswald and Mark Ernestus, as Basic Channel, dissolve the chords in delay and echo.</dd></div>
-            <div><dt>2010s</dt><dd><b>Hypnotic</b> <span class="muted">&middot; Italy.</span> Long, slowly shifting loops. Donato Dozzy. Closest to the original idea.</dd></div>
-            <div><dt>2010s</dt><dd><b>Industrial</b> <span class="muted">&middot; UK, Berlin.</span> Distortion and metal. Perc, Paula Temple.</dd></div>
-            <div><dt>2010s</dt><dd><b>Dark disco</b> <span class="muted">&middot; across Europe.</span> New Beat, EBM, Italo and cold wave, slowed back down. Mid-tempo, nocturnal, a bit sleazy.</dd></div>
+            <div><dt>Early 1990s</dt><dd><b>Minimal</b> <span class="muted">&middot; Detroit, Windsor.</span> Robert Hood and Richie Hawtin strip techno to the bone.</dd></div>
+            <div><dt>Early 1990s</dt><dd><b>Tech house</b> <span class="muted">&middot; London.</span> Techno&rsquo;s toughness with house&rsquo;s swing, from the Wiggle parties. <span class="tz">Tanzaff</span> Technauto</dd></div>
+            <div><dt>Mid-1990s</dt><dd><b>Dub techno</b> <span class="muted">&middot; Berlin.</span> Basic Channel dissolve the chords in delay and echo.</dd></div>
+            <div><dt>2010s</dt><dd><b>Dark disco</b> <span class="muted">&middot; across Europe.</span> New Beat, EBM, Italo and cold wave, slowed back down.</dd></div>
           </dl>
         </div>
       </section>
 
-      <section class="block" aria-labelledby="edm-title">
-        <div class="story-label"><p class="label label-signal">A critical note</p><p class="tc">2010s&ndash;today</p></div>
+      <section class="block" aria-labelledby="sits-title">
+        <div class="story-label"><p class="label label-signal">Tanzaff</p><p class="tc">2018&ndash;2026</p></div>
         <div class="story-body">
-          <h3 id="edm-title" class="story-title">EDM: the drop as a business model</h3>
-          <div class="split">
-            <dl class="facts facts-stack">
-              <div><dt>The label</dt><dd>A US marketing umbrella of the early 2010s, wrapped around mostly European pop-dance.</dd></div>
-              <div><dt>The money</dt><dd>2014: Calvin Harris earns $66 million, much of it from a Las Vegas residency. In 2016 SFX, the company buying up EDM festivals, goes bankrupt.</dd></div>
-              <div><dt>The show</dt><dd>2012: deadmau5 writes that the big headliners, himself included, mostly play pre-programmed sets: they press play and work the crowd. The blog post is titled &ldquo;We All Hit Play&rdquo;.</dd></div>
-              <div><dt>Techno&rsquo;s own big rooms</dt><dd>Since the 2020s techno has its stadium wings too: hard techno at 145 to 160 BPM, with schranz and hardgroove revived (Charlotte de Witte, Amelie Lens), and melodic techno built for screens, from Afterlife to the Las Vegas Sphere.</dd></div>
-            </dl>
-            <div class="table-wrap">
-              <table class="data" style="min-width: 22rem">
-                <thead><tr><th scope="col"><span class="visually-hidden">Aspect</span></th><th scope="col">Techno</th><th scope="col">EDM</th></tr></thead>
-                <tbody>
-                  <tr><td class="key">Arc</td><td>Tension held for hours</td><td>Build, riser, drop, repeat</td></tr>
-                  <tr><td class="key">Star</td><td>Faceless on principle</td><td>The DJ as pop star</td></tr>
-                  <tr><td class="key">Room</td><td>Dark, dancers face each other</td><td>Stage show, all eyes front</td></tr>
-                  <tr><td class="key">Sound</td><td>The groove is the hook</td><td>The vocal is the hook</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p class="closing">Techno builds tension for hours. EDM cashes it in every sixteen bars.</p>
+          <h3 id="sits-title" class="story-title">Where Tanzaff sits</h3>
+          <p>Three recent tracks, and the branch of the family tree each one comes from.</p>
+          <ul class="feature-grid feature-grid-3">
+            <li>
+              <a class="feature-link" href="https://www.youtube.com/watch?v=-9VJNBk3ibA" data-video="-9VJNBk3ibA" data-title="Technauto" rel="noopener" target="_blank">
+                <span class="screen">
+                  <img src="https://i.ytimg.com/vi/-9VJNBk3ibA/hqdefault.jpg" alt="" style="--zoom:1.70;--tx:-2.9%;--ty:19.4%" width="480" height="360" loading="lazy" decoding="async" />
+                  <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                </span>
+                <span class="feature-head"><span class="feature-title">Technauto</span><span class="tc">2026</span></span>
+                <span class="feature-note"><span class="tz">Tech house</span> 113 BPM. A hardware jam, from the Wiggle parties&rsquo; branch.</span>
+              </a>
+            </li>
+            <li>
+              <a class="feature-link" href="https://www.youtube.com/watch?v=p9fLxm0uN0k" data-video="p9fLxm0uN0k" data-title="Burning Desire" rel="noopener" target="_blank">
+                <span class="screen">
+                  <img src="https://i.ytimg.com/vi/p9fLxm0uN0k/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+                  <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                </span>
+                <span class="feature-head"><span class="feature-title">Burning Desire</span><span class="tc">2018</span></span>
+                <span class="feature-note"><span class="tz">Italo disco</span> 123 BPM. Cheap synths under a disco beat.</span>
+              </a>
+            </li>
+            <li>
+              <a class="feature-link" href="https://www.youtube.com/watch?v=RQVVHtpJSL0" data-video="RQVVHtpJSL0" data-title="Slow Hope" rel="noopener" target="_blank">
+                <span class="screen">
+                  <img src="https://i.ytimg.com/vi/RQVVHtpJSL0/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async" />
+                  <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                </span>
+                <span class="feature-head"><span class="feature-title">Slow Hope</span><span class="tc">2026</span></span>
+                <span class="feature-note"><span class="tz">Dark techno</span> Melancholic, with voices from a 1979 SRF film.</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -664,12 +543,12 @@
         <p class="chapter-num">05</p>
         <div>
           <h2 class="chapter-title">Your turn</h2>
-          <p class="chapter-dek">A listening path, a self-test and the sources.</p>
+          <p class="chapter-dek">A listening path and the sources.</p>
         </div>
       </header>
 
       <section class="block" aria-labelledby="path-title">
-        <div class="story-label"><p class="label label-signal">Homework</p><p class="tc">23 tracks &middot; 1973&ndash;1997 &middot; in this order</p></div>
+        <div class="story-label"><p class="label label-signal">Homework</p><p class="tc">12 tracks &middot; in this order</p></div>
         <div class="story-body">
           <h3 id="path-title" class="story-title">A listening path</h3>
           <div class="table-wrap">
@@ -679,50 +558,48 @@
                 <tr><td class="yr">1973</td><td>Harold Melvin &amp; the Blue Notes</td><td><a href="https://www.youtube.com/results?search_query=Harold+Melvin+Blue+Notes+The+Love+I+Lost" rel="noopener" target="_blank">The Love I Lost</a></td><td>Single, Philadelphia International</td><td>Earl Young&rsquo;s four on the floor</td></tr>
                 <tr><td class="yr">1974</td><td>Tangerine Dream</td><td><a href="https://www.youtube.com/results?search_query=Tangerine+Dream+Phaedra" rel="noopener" target="_blank">Phaedra</a></td><td><i>Phaedra</i> (LP), Virgin</td><td>The sequencer as engine</td></tr>
                 <tr><td class="yr">1977</td><td>Kraftwerk</td><td><a href="https://www.youtube.com/results?search_query=Kraftwerk+Trans-Europe+Express" rel="noopener" target="_blank">Trans-Europe Express</a></td><td><i>Trans-Europe Express</i> (LP)</td><td>The melody electro borrowed</td></tr>
-                <tr><td class="yr">1977</td><td>Parliament</td><td><a href="https://www.youtube.com/results?search_query=Parliament+Flash+Light" rel="noopener" target="_blank">Flash Light</a></td><td><i>Funkentelechy vs. the Placebo Syndrome</i> (LP), Casablanca</td><td>The Minimoog bass line</td></tr>
                 <tr><td class="yr">1978</td><td>Automat</td><td><a href="https://www.youtube.com/results?search_query=Automat+Automat+1978+MCS70" rel="noopener" target="_blank">Automat</a></td><td><i>Automat</i> (LP), side A, Harvest</td><td>One synth, drums included</td></tr>
-                <tr><td class="yr">1980</td><td>Yello</td><td><a href="https://www.youtube.com/results?search_query=Yello+Bostich" rel="noopener" target="_blank">Bostich</a></td><td>Solid Pleasure</td><td>Zurich&rsquo;s electro</td></tr>
                 <tr><td class="yr">1981</td><td>Liaisons Dangereuses</td><td><a href="https://www.youtube.com/results?search_query=Liaisons+Dangereuses+Los+Ni%C3%B1os+del+Parque" rel="noopener" target="_blank">Los Ni&ntilde;os del Parque</a></td><td>Liaisons Dangereuses (LP)</td><td>The EBM link</td></tr>
                 <tr><td class="yr">1982</td><td>Klein &amp; M.B.O.</td><td><a href="https://www.youtube.com/results?search_query=Klein+%26+M.B.O.+Dirty+Talk" rel="noopener" target="_blank">Dirty Talk</a></td><td>12-inch single</td><td>The Italo link</td></tr>
                 <tr><td class="yr">1984</td><td>Cybotron</td><td><a href="https://www.youtube.com/results?search_query=Cybotron+Techno+City" rel="noopener" target="_blank">Techno City</a></td><td>12-inch, Fantasy</td><td>The first track to sound like techno</td></tr>
-                <tr><td class="yr">1985</td><td>Model 500</td><td><a href="https://www.youtube.com/results?search_query=Model+500+No+UFO%27s" rel="noopener" target="_blank">No UFO&rsquo;s</a></td><td>12-inch, Metroplex</td><td>Atkins&rsquo; blueprint</td></tr>
-                <tr><td class="yr">1986</td><td>OFF</td><td><a href="https://www.youtube.com/results?search_query=OFF+Electrica+Salsa" rel="noopener" target="_blank">Electrica Salsa</a></td><td>12-inch, ZYX</td><td>Frankfurt, two years before Omen</td></tr>
                 <tr><td class="yr">1987</td><td>Phuture</td><td><a href="https://www.youtube.com/results?search_query=Phuture+Acid+Tracks" rel="noopener" target="_blank">Acid Tracks</a></td><td>12-inch, Trax</td><td>A 303 misused</td></tr>
                 <tr><td class="yr">1987</td><td>Rhythim Is Rhythim</td><td><a href="https://www.youtube.com/results?search_query=Rhythim+Is+Rhythim+Strings+of+Life" rel="noopener" target="_blank">Strings of Life</a></td><td>12-inch, Transmat</td><td>Techno with a soul</td></tr>
-                <tr><td class="yr">1988</td><td>Inner City</td><td><a href="https://www.youtube.com/results?search_query=Inner+City+Big+Fun" rel="noopener" target="_blank">Big Fun</a></td><td>Paradise</td><td>Detroit goes pop</td></tr>
-                <tr><td class="yr">1990</td><td>The Age of Love</td><td><a href="https://www.youtube.com/results?search_query=The+Age+of+Love+The+Age+of+Love" rel="noopener" target="_blank">The Age of Love</a></td><td>12-inch</td><td>Trance, year zero</td></tr>
                 <tr><td class="yr">1991</td><td>X-101</td><td><a href="https://www.youtube.com/results?search_query=X-101+Sonic+Destroyer" rel="noopener" target="_blank">Sonic Destroyer</a></td><td>X-101 (Tresor 001)</td><td>Detroit in Berlin</td></tr>
-                <tr><td class="yr">1992</td><td>Hardfloor</td><td><a href="https://www.youtube.com/results?search_query=Hardfloor+Acperience+1" rel="noopener" target="_blank">Acperience 1</a></td><td><i>Hardtrance Acperience EP</i>, Harthouse</td><td>Frankfurt trance, acid style</td></tr>
                 <tr><td class="yr">1993</td><td>Basic Channel</td><td><a href="https://www.youtube.com/results?search_query=Basic+Channel+Phylyps+Trak" rel="noopener" target="_blank">Phylyps Trak</a></td><td>12-inch, Basic Channel</td><td>Berlin dub techno</td></tr>
-                <tr><td class="yr">1994</td><td>Robert Hood</td><td><a href="https://www.youtube.com/results?search_query=Robert+Hood+The+Pace" rel="noopener" target="_blank">The Pace</a></td><td>Minimal Nation</td><td>Minimal, year zero</td></tr>
-                <tr><td class="yr">1996</td><td>Jeff Mills</td><td><a href="https://www.youtube.com/results?search_query=Jeff+Mills+The+Bells" rel="noopener" target="_blank">The Bells</a></td><td>Kat Moda EP</td><td>Peak-time Detroit</td></tr>
-                <tr><td class="yr">1996</td><td>Motorbass</td><td><a href="https://www.youtube.com/results?search_query=Motorbass+Flying+Fingers" rel="noopener" target="_blank">Flying Fingers</a></td><td><i>Pansoul</i> (LP)</td><td>French touch, closest to techno</td></tr>
-                <tr><td class="yr">1997</td><td>Laurent Garnier</td><td><a href="https://www.youtube.com/results?search_query=Laurent+Garnier+Crispy+Bacon" rel="noopener" target="_blank">Crispy Bacon</a></td><td>30, F Communications</td><td>Paris goes techno</td></tr>
                 <tr><td class="yr">1997</td><td>Housey Doingz</td><td><a href="https://www.youtube.com/results?search_query=Housey+Doingz+Gobstopper" rel="noopener" target="_blank">Gobstopper</a></td><td>12-inch</td><td>Wiggle-era tech house</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="muted">Play thirty seconds of each, in order, and the evolution is obvious. Track names open a YouTube search.</p>
-        </div>
-      </section>
-
-      <section class="block" aria-labelledby="quiz-title">
-        <div class="story-label"><p class="label label-signal">Self-test</p><p class="tc">Tap for answers</p></div>
-        <div class="story-body">
-          <h3 id="quiz-title" class="story-title">Test yourself</h3>
-          <div>
-            <details class="quiz"><summary><span class="tc">01</span><span>What was Tresor before it was a club?</span></summary><p>The bank vault of the Wertheim department store.</p></details>
-            <details class="quiz"><summary><span class="tc">02</span><span>Who was the TB-303 designed for?</span></summary><p>Guitarists who wanted a bass player in a box.</p></details>
-            <details class="quiz"><summary><span class="tc">03</span><span>Which Swiss duo did America mistake for rappers?</span></summary><p>Yello, with &ldquo;Bostich&rdquo; in 1980.</p></details>
-          </div>
-          <dl class="facts worth"><div><dt>Watch next</dt><dd><i>Universal Techno</i> (1996), <i>High Tech Soul</i> (2006), <i>Sub Berlin: The Story of Tresor</i> (2008), <i>We Call It Techno!</i> (2008)</dd></div></dl>
+          <p class="muted">Track names open a YouTube search.</p>
+          <details class="more">
+            <summary>11 more records</summary>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th scope="col">Year</th><th scope="col">Artist</th><th scope="col">Track</th><th scope="col">Release</th><th scope="col">Listen for</th></tr></thead>
+                <tbody>
+                <tr><td class="yr">1977</td><td>Parliament</td><td><a href="https://www.youtube.com/results?search_query=Parliament+Flash+Light" rel="noopener" target="_blank">Flash Light</a></td><td><i>Funkentelechy vs. the Placebo Syndrome</i> (LP), Casablanca</td><td>The Minimoog bass line</td></tr>
+                <tr><td class="yr">1980</td><td>Yello</td><td><a href="https://www.youtube.com/results?search_query=Yello+Bostich" rel="noopener" target="_blank">Bostich</a></td><td>Solid Pleasure</td><td>Zurich&rsquo;s electro</td></tr>
+                <tr><td class="yr">1985</td><td>Model 500</td><td><a href="https://www.youtube.com/results?search_query=Model+500+No+UFO%27s" rel="noopener" target="_blank">No UFO&rsquo;s</a></td><td>12-inch, Metroplex</td><td>Atkins&rsquo; blueprint</td></tr>
+                <tr><td class="yr">1986</td><td>OFF</td><td><a href="https://www.youtube.com/results?search_query=OFF+Electrica+Salsa" rel="noopener" target="_blank">Electrica Salsa</a></td><td>12-inch, ZYX</td><td>Frankfurt, two years before Omen</td></tr>
+                <tr><td class="yr">1988</td><td>Inner City</td><td><a href="https://www.youtube.com/results?search_query=Inner+City+Big+Fun" rel="noopener" target="_blank">Big Fun</a></td><td>Paradise</td><td>Detroit goes pop</td></tr>
+                <tr><td class="yr">1990</td><td>The Age of Love</td><td><a href="https://www.youtube.com/results?search_query=The+Age+of+Love+The+Age+of+Love" rel="noopener" target="_blank">The Age of Love</a></td><td>12-inch</td><td>Trance, year zero</td></tr>
+                <tr><td class="yr">1992</td><td>Hardfloor</td><td><a href="https://www.youtube.com/results?search_query=Hardfloor+Acperience+1" rel="noopener" target="_blank">Acperience 1</a></td><td><i>Hardtrance Acperience EP</i>, Harthouse</td><td>Frankfurt trance, acid style</td></tr>
+                <tr><td class="yr">1994</td><td>Robert Hood</td><td><a href="https://www.youtube.com/results?search_query=Robert+Hood+The+Pace" rel="noopener" target="_blank">The Pace</a></td><td>Minimal Nation</td><td>Minimal, year zero</td></tr>
+                <tr><td class="yr">1996</td><td>Jeff Mills</td><td><a href="https://www.youtube.com/results?search_query=Jeff+Mills+The+Bells" rel="noopener" target="_blank">The Bells</a></td><td>Kat Moda EP</td><td>Peak-time Detroit</td></tr>
+                <tr><td class="yr">1996</td><td>Motorbass</td><td><a href="https://www.youtube.com/results?search_query=Motorbass+Flying+Fingers" rel="noopener" target="_blank">Flying Fingers</a></td><td><i>Pansoul</i> (LP)</td><td>French touch, closest to techno</td></tr>
+                <tr><td class="yr">1997</td><td>Laurent Garnier</td><td><a href="https://www.youtube.com/results?search_query=Laurent+Garnier+Crispy+Bacon" rel="noopener" target="_blank">Crispy Bacon</a></td><td>30, F Communications</td><td>Paris goes techno</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
         </div>
       </section>
 
       <section class="block" aria-labelledby="sources-title">
         <div class="story-label"><p class="label label-signal">Sources</p><p class="tc">Further reading</p></div>
         <div class="story-body">
-          <h3 id="sources-title" class="story-title">Where the facts come from</h3>
+          <details class="more">
+            <summary id="sources-title">Where the facts come from</summary>
           <div class="split">
             <dl class="facts facts-stack">
               <div><dt>Detroit</dt><dd><a href="https://timeline.carnegiehall.org/genres/detroit-techno" rel="noopener" target="_blank">Carnegie Hall, Timeline of African American Music: Detroit techno</a></dd></div>
@@ -749,7 +626,8 @@
               <div><dt>Paris</dt><dd><a href="https://en.wikipedia.org/wiki/Laurent_Garnier" rel="noopener" target="_blank">Wikipedia, Laurent Garnier</a> &middot; <a href="https://en.wikipedia.org/wiki/Homework_(Daft_Punk_album)" rel="noopener" target="_blank">Wikipedia, Homework</a></dd></div>
             </dl>
           </div>
-          <p class="tc">All audio on this page was synthesised for it. Attendance figures are organisers&rsquo; estimates.</p>
+          <p class="tc">All audio on this page was synthesised for it.</p>
+          </details>
         </div>
       </section>
 
@@ -781,6 +659,7 @@
       </footer>
     </main>
 
+    <script src="../player.js?v=10" defer></script>
     <script src="../monkeys.js?v=3" defer></script>
     <script data-goatcounter="https://tanzaff.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>

@@ -20,7 +20,7 @@ Then visit http://localhost:8000
 | --- | --- |
 | `index.html` | The home page: hero, Featured, About, All tracks, Collaborations, Studio, Listen, Techno history teaser, footer |
 | `techno/index.html` | The article *Techno, a history in 4/4*, in five chapters |
-| `techno/media/` | The article's two clips with sound, their poster frames, and its link-preview image `og.jpg` |
+| `techno/media/` | The article's one clip with sound (`loop.mp4`), its poster frame, and its link-preview image `og.jpg` |
 | `styles.css` | All the styling. Colors are variables at the top |
 | `player.js` | Opens a track in a player on the page instead of sending the visitor to YouTube |
 | `monkeys.js` | Makes the monkeys above the footer dance while the visitor scrolls |
@@ -127,7 +127,7 @@ Studio list) and the footer with the monkeys. Its own pieces are in the **HISTOR
 end of `styles.css`.
 
 It lives one folder down, so every path to a shared file starts with `../` (styles, fonts,
-favicon, `monkeys.js`, the monkey pictures). The two clips are plain `<video>` files in
+favicon, `monkeys.js`, the monkey pictures). The clip is a plain `<video>` file in
 `techno/media/` and only load when someone presses play.
 
 Each chapter starts with a `<header class="chapter-head" id="...">`; the home page teaser links
