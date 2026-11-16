@@ -1300,3 +1300,4 @@ button:focus-visible {
 .chart-wrap.tree svg.hl g.n { opacity: 0.25; }
 .chart-wrap.tree svg.hl g.n.on { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .chart-wrap.tree path, .chart-wrap.tree g.n { transition: none; } }
+.data td.yr { white-space: nowrap; }
