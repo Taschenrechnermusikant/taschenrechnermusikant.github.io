@@ -128,7 +128,7 @@ end of `styles.css`.
 
 It lives one folder down, so every path to a shared file starts with `../` (styles, fonts,
 favicon, `monkeys.js`, the monkey pictures). The clip is a plain `<video>` file in
-`techno/media/` and only load when someone presses play.
+`techno/media/` and only loads when someone presses play.
 
 Each chapter starts with a `<header class="chapter-head" id="...">`; the home page teaser links
 to those ids, so keep them stable when editing.
