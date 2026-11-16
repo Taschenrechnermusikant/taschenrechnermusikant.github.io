@@ -1273,3 +1273,18 @@ button:focus-visible {
   .contents a { grid-template-columns: 2.25rem minmax(0, 1fr); }
   .contents a .tc:last-child { display: none; }
 }
+
+/* Photos in the history article */
+.photo, .photo-pair figure { margin: 1.5rem 0 0; }
+.photo img, .photo-pair img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--rule);
+  filter: grayscale(0.35) contrast(1.05);
+}
+.photo img { aspect-ratio: 16 / 7; object-fit: cover; }
+.photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.photo-pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+.photo figcaption, .photo-pair figcaption { margin-top: 0.5rem; font-size: 0.85rem; color: var(--muted); }
+.photo .credit, .photo-pair .credit { display: block; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.02em; opacity: 0.8; }
+.photo figcaption a, .photo-pair figcaption a { color: inherit; text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 2px; }
+@media (max-width: 560px) { .photo-pair { grid-template-columns: 1fr; } }
